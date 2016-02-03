@@ -1,0 +1,157 @@
+\begin{thebibliography}{10}
+
+\bibitem{fiers2012time-domain}
+Fiers, M., Vaerenbergh, T.~V., Caluwaerts, K., Ginste, D.~V., Schrauwen, B.,
+  Dambre, J., and Bienstman, P., ``Time-domain and frequency-domain modeling of
+  nonlinear optical components at the circuit-level using a node-based
+  approach,'' {\em J. Opt. Soc. Am. B}~{\bf 29},  896--900 (May 2012).
+
+\bibitem{melati2012validation}
+Melati, D., Morichetti, F., Canciamilla, A., Roncelli, D., Soares, F., Bakker,
+  A., and Melloni, A., ``Validation of the building block based approach for
+  the design of photonic integrated circuits,'' (2012).
+
+\bibitem{shibata1998generalized-scattering-matrix}
+Shibata, T. and Itoh, T., ``Generalized-scattering-matrix modeling of waveguide
+  circuits using {FDTD} field simulations,'' {\em Microwave Theory and
+  Techniques, IEEE Transactions on}~{\bf 46}(11),  1742--1751 (1998).
+
+\bibitem{wartak2013computational}
+Wartak, M.~S.,  [{\em Computational Photonics: An Introduction with
+  MATLAB}{\nolinebreak\hspace{0.1em}]}, Cambridge University Press (2013).
+
+\bibitem{pinguet2011cmos}
+Pinguet, T., Gloeckner, S., Masini, G., and Mekis, A., ``{CMOS} photonics: A
+  platform for optoelectronics integration,'' in [{\em Silicon Photonics
+  II}{\nolinebreak\hspace{0.1em}]},  Lockwood, D.~J. and Pavesi, L., eds., {\em
+  Topics in Applied Physics} {\bf 119},  187--216, Springer Berlin Heidelberg
+  (2011).
+
+\bibitem{gunupudi2010self-consistent}
+Gunupudi, P., Smy, T., Klein, J., and Jakubczyk, Z.~J., ``Self-consistent
+  simulation of opto-electronic circuits using a modified nodal analysis
+  formulation,'' {\em Advanced Packaging, IEEE Transactions on}~{\bf 33}(4),
+  979--993 (2010).
+
+\bibitem{wang2013universal}
+Wang, Y., Flueckiger, J., Lin, C., and Chrostowski, L., ``Universal grating
+  coupler design,'' {\em Proc. SPIE}~{\bf 8915},  89150Y (2013).
+
+\bibitem{gustavsen1999rational}
+Gustavsen, B. and Semlyen, A., ``Rational approximation of frequency domain
+  responses by vector fitting,'' {\em Power Delivery, IEEE Transactions
+  on}~{\bf 14}(3),  1052--1061 (1999).
+
+\bibitem{zeng2006modified}
+Zeng, R.~X. and Sinsky, J.~H., ``Modified rational function modeling technique
+  for high speed circuits,'' {\em Microwave Symposium Digest, 2006. IEEE MTT-S
+  International} ,  1951--1954 (2006).
+
+\bibitem{gustavsen2008fast}
+Gustavsen, B. and Semlyen, A., ``Fast passivity assessment for s-parameter
+  rational models via a half-size test matrix,'' {\em IEEE Transactions on
+  Microwave Theory and Techniques}~{\bf 56}(12),  2701 (2008).
+
+\bibitem{gustavsen2006improving}
+Gustavsen, B., ``Improving the pole relocating properties of vector fitting,''
+  {\em Power Delivery, IEEE Transactions on}~{\bf 21}(3),  1587--1592 (2006).
+
+\bibitem{deschrijver2008macromodeling}
+Deschrijver, D., Mrozowski, M., Dhaene, T., and De~Zutter, D., ``Macromodeling
+  of multiport systems using a fast implementation of the vector fitting
+  method,'' {\em Microwave and Wireless Components Letters, IEEE}~{\bf 18}(6),
+  383--385 (2008).
+
+\bibitem{gustavsen2010fast}
+Gustavsen, B., ``Fast passivity enforcement for s-parameter models by
+  perturbation of residue matrix eigenvalues,'' {\em IEEE Transactions on
+  advanced packaging}~{\bf 33}(1),  257 (2010).
+
+\bibitem{gustavsen2002computer}
+Gustavsen, B., ``Computer code for rational approximation of frequency
+  dependent admittance matrices,'' {\em Power Delivery, IEEE Transactions
+  on}~{\bf 17}(4),  1093--1098 (2002).
+
+\bibitem{bogaerts2011compact}
+Bogaerts, W. and Selvaraja, S., ``Compact single-mode silicon hybrid rib/strip
+  waveguide with adiabatic bends,'' {\em Photonics Journal, IEEE}~{\bf 3}(3),
+  422--432 (2011).
+
+\bibitem{cherchi2013dramatic}
+Cherchi, M., Ylinen, S., Harjanne, M., Kapulainen, M., and Aalto, T.,
+  ``Dramatic size reduction of waveguide bends on a micron-scale silicon
+  photonic platform,'' {\em Optics express}~{\bf 21}(15),  17814--17823 (2013).
+
+\bibitem{li2012ultralow-loss}
+Li, G., Yao, J., Thacker, H., Mekis, A., Zheng, X., Shubin, I., Luo, Y., Lee,
+  J.-h., Raj, K., Cunningham, J.~E., and Krishnamoorthy, A.~V.,
+  ``Ultralow-loss, high-density {SOI} optical waveguide routing for macrochip
+  interconnects,'' {\em Optics Express}~{\bf 20},  12035--12039 (05 2012).
+
+\bibitem{bogaerts2007low-loss}
+Bogaerts, W., Dumon, P., Thourhout, D., and Baets, R., ``Low-loss,
+  low-cross-talk crossings for silicon-on-insulator nanophotonic waveguides,''
+  {\em Optics Lettersers}~{\bf 32},  2801--2803 (2007).
+
+\bibitem{zhang2013a-cmos-compatible}
+Zhang, Y., Yang, S., Lim, A. E.-J., Lo, G.-Q., Galland, C., Baehr-Jones, T.,
+  and Hochberg, M., ``A {CMOS}-compatible, low-loss, and low-crosstalk silicon
+  waveguide crossing,'' {\em IEEE Photonics Technology Letters}~{\bf 25},
+  422--425 (2013).
+
+\bibitem{wang2011uniform}
+Wang, X., Shi, W., Vafaei, R., Jaeger, N. A.~F., and Chrostowski, L., ``Uniform
+  and sampled {Bragg} gratings in {SOI} strip waveguides with sidewall
+  corrugations,'' {\em IEEE Photon. Tech. Lett.}~{\bf 23}(5),  290--292 (2011).
+
+\bibitem{bogaerts2008closed-loop}
+Bogaerts, W., Bradt, P., Vanholme, L., Bienstman, P., and Baets, R.,
+  ``Closed-loop modeling of silicon nanophotonics from design to fabrication
+  and back again,'' {\em Optical and quantum electronics}~{\bf 40}(11),
+  801--811 (2008).
+
+\bibitem{adam2003improved}
+Adam, K., Granik, Y., Torres, A., and Cobb, N.~B., ``Improved modeling
+  performance with an adapted vectorial formulation of the hopkins imaging
+  equation,'' (2003).
+
+\bibitem{wang2012lithography}
+Wang, X., Shi, W., Hochberg, M., Adam, K., Schelew, E., Young, J.~F., Jaeger,
+  N. A.~F., and Chrostowski, L., ``Lithography simulation for the fabrication
+  of silicon photonic devices with deep-ultraviolet lithography,'' in [{\em
+  IEEE Int. Conf. Group IV Photon.}{\nolinebreak\hspace{0.1em}]},   ThP 17
+  (2012).
+
+\bibitem{cooper2010235-ring}
+Cooper, M.~L., Gupta, G., Green, W.~M., Assefa, S., Xia, F., Vlasov, Y.~A., and
+  Mookherjea, S., ``235-ring coupled-resonator optical waveguides,'' {\em Conf.
+  Lasers and Electro-Optics}  (2010).
+
+\bibitem{zortman2010silicon}
+Zortman, W., Trotter, D., and Watts, M., ``Silicon photonics manufacturing,''
+  {\em Optics Express}~{\bf 18}(23),  23598--23607 (2010).
+
+\bibitem{krishnamoorthy2011exploiting}
+Krishnamoorthy, A., Zheng, X., Li, G., Yao, J., Pinguet, T., Mekis, A.,
+  Thacker, H., Shubin, I., Luo, Y., Raj, K., and Cunningham, J., ``Exploiting
+  {CMOS} manufacturing to reduce tuning requirements for resonant optical
+  devices,'' {\em IEEE Photonics Journal}~{\bf 3}(3),  567--579 (2011).
+
+\bibitem{selvaraja2010subnanometer}
+Selvaraja, S.~K., Bogaerts, W., Dumon, P., Van~Thourhout, D., and Baets, R.,
+  ``Subnanometer linewidth uniformity in silicon nanophotonic waveguide devices
+  using {CMOS} fabrication technology,'' {\em IEEE J. Selected Topics in
+  Quantum Electronics}~{\bf 16}(1),  316--324 (2010).
+
+\bibitem{wang2012narrow-band}
+Wang, X., Shi, W., Yun, H., Grist, S., Jaeger, N. A.~F., and Chrostowski, L.,
+  ``Narrow-band waveguide {B}ragg gratings on {SOI} wafers with
+  {CMOS}-compatible fabrication process,'' {\em Optics Express}~{\bf 20},
+  15547--15558 (Jul 2012).
+
+\bibitem{chrostowski2014impact}
+Chrostowski, L., Wang, X., Flueckiger, J., Wu, Y., Wang, Y., and Fard, S.~T.,
+  ``Impact of fabrication non-uniformity on chip-scale silicon photonic
+  integrated circuits,'' {\em Optical Fiber Conference}  (2014).
+
+\end{thebibliography}

@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: SPIE_2014_lukasc_v2b.aux
+The style file: spiebib33.bst
+Database file #1: ../Refs/references.bib
+Warning--entry type for "adam2003improved" isn't style-file defined
+--line 12 of file ../Refs/references.bib
+Warning--empty title in melati2012validation
+Warning--empty volume in melati2012validation
+Warning--empty volume in zeng2006modified
+Warning--empty volume in cooper2010235-ring
+Warning--empty volume in chrostowski2014impact
+You've used 29 entries,
+            1993 wiz_defined-function locations,
+            679 strings with 10278 characters,
+and the built_in function-call counts, 9663 in all, are:
+= -- 911
+> -- 455
+< -- 0
++ -- 162
+- -- 133
+* -- 856
+:= -- 1293
+add.period$ -- 29
+call.type$ -- 29
+change.case$ -- 28
+chr.to.int$ -- 0
+cite$ -- 34
+duplicate$ -- 427
+empty$ -- 802
+format.name$ -- 133
+if$ -- 2305
+int.to.chr$ -- 0
+int.to.str$ -- 29
+missing$ -- 29
+newline$ -- 90
+num.names$ -- 31
+pop$ -- 53
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 399
+stack$ -- 0
+substring$ -- 774
+swap$ -- 277
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 5
+while$ -- 90
+width$ -- 31
+write$ -- 257
+(There were 6 warnings)
