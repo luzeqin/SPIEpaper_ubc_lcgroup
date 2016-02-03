@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  2 FEB 2016 21:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  2 FEB 2016 22:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,8 +6,8 @@ entering extended mode
 (./SPIE_2014_lukasc_v2b.tex
 LaTeX2e <2011/06/27>
 Babel <3.9f> and hyphenation patterns for 78 languages loaded.
-(./spie.cls
-Document Class: spie 2008/01/19 v3.3 SPIE Proceedings class
+(/usr/local/texlive/2013/texmf-dist/tex/latex/spie/spie.cls
+Document Class: spie 2007/04/14 v3.25 SPIE Proceedings class
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/size10.clo
@@ -26,13 +26,14 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen102
 )
 ten-point font
-(./ifthen.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-) (./cite.sty
-LaTeX Info: Redefining \cite on input line 285.
-LaTeX Info: Redefining \nocite on input line 356.
-Package: cite 2009/08/29  v 5.2
-LaTeX Info: Redefining \cite on input line 437.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
+LaTeX Info: Redefining \cite on input line 464.
 )
 \c@theorem=\count87
 )
@@ -628,7 +629,14 @@ overpic: relative positioning in percent
 LaTeX Warning: Unused global option(s):
     [journal].
 
-(./SPIE_2014_lukasc_v2b.aux)
+(./SPIE_2014_lukasc_v2b.aux
+
+LaTeX Warning: Label `INT_ONA_DCring' multiply defined.
+
+
+LaTeX Warning: Label `sub@INT_ONA_DCring' multiply defined.
+
+)
 \openout1 = `SPIE_2014_lukasc_v2b.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -644,8 +652,7 @@ LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 27.
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 Package caption Info: Begin \AtBeginDocument code.
@@ -732,26 +739,14 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
 
-
-LaTeX Warning: Reference `SiliconPhotonicsDesign_Overview' on page 1 undefined 
-on input line 69.
-
-
-LaTeX Warning: File `../figs/SiliconPhotonicsDesign_Overview-crop.pdf' not foun
-d on input line 75.
-
-
-! Package pdftex.def Error: File `../figs/SiliconPhotonicsDesign_Overview-crop.
-pdf' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.75 .../SiliconPhotonicsDesign_Overview-crop.pdf}
-                                                  
-? 
-[1
+<../figs/SiliconPhotonicsDesign_Overview-crop.pdf, id=1, 704.6325pt x 530.98375
+pt>
+File: ../figs/SiliconPhotonicsDesign_Overview-crop.pdf Graphic file (type pdf)
+ <use ../figs/SiliconPhotonicsDesign_Overview-crop.pdf>
+Package pdftex.def Info: ../figs/SiliconPhotonicsDesign_Overview-crop.pdf used 
+on input line 75.
+(pdftex.def)             Requested size: 341.47424pt x 257.31615pt.
+ [1
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 92.
@@ -761,192 +756,74 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 92.
- [2]
+ [2 <../figs/SiliconPhotonicsDesign_Overview-crop.pdf>]
+<../figs/symbol_GC.png, id=106, 1655.18375pt x 823.075pt>
+File: ../figs/symbol_GC.png Graphic file (type png)
 
-! LaTeX Error: File `../figs/symbol_GC' not found.
+<use ../figs/symbol_GC.png>
+Package pdftex.def Info: ../figs/symbol_GC.png used on input line 117.
+(pdftex.def)             Requested size: 146.34824pt x 72.7674pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.117 ...width=0.3\linewidth]{../figs/symbol_GC} }
-                                                  
-? 
+<../figs/symbol_BondPad.png, id=108, 989.6975pt x 850.17625pt>
+File: ../figs/symbol_BondPad.png Graphic file (type png)
 
-Overfull \hbox (4.98987pt too wide) in paragraph at lines 117--117
-[]\OT1/ptm/m/n/9 (a)
- []
+<use ../figs/symbol_BondPad.png>
+Package pdftex.def Info: ../figs/symbol_BondPad.png used on input line 118.
+(pdftex.def)             Requested size: 107.32153pt x 92.18349pt.
 
+<../figs/symbol_YBranch.png, id=109, 1050.92625pt x 835.12pt>
+File: ../figs/symbol_YBranch.png Graphic file (type png)
 
-Overfull \hbox (5.5028pt too wide) in paragraph at lines 117--117
-|\OT1/ptm/m/n/9 Fi-
- []
+<use ../figs/symbol_YBranch.png>
+Package pdftex.def Info: ../figs/symbol_YBranch.png used on input line 119.
+(pdftex.def)             Requested size: 146.34824pt x 116.2916pt.
 
+<../figs/symbol_RingMod.png, id=110, 421.575pt x 822.07124pt>
+File: ../figs/symbol_RingMod.png Graphic file (type png)
 
-Overfull \hbox (6.4929pt too wide) in paragraph at lines 117--117
-\OT1/ptm/m/n/9 bre
- []
+<use ../figs/symbol_RingMod.png>
+Package pdftex.def Info: ../figs/symbol_RingMod.png used on input line 120.
+(pdftex.def)             Requested size: 97.563pt x 190.23897pt.
 
+<../figs/schematic_wdm2tx.png, id=111, 1705.37125pt x 725.71124pt>
+File: ../figs/schematic_wdm2tx.png Graphic file (type png)
 
-Overfull \hbox (11.99178pt too wide) in paragraph at lines 117--117
-\OT1/ptm/m/n/9 grat-
- []
-
-
-Overfull \hbox (6.5019pt too wide) in paragraph at lines 117--117
-\OT1/ptm/m/n/9 ing
- []
-
-
-Overfull \hbox (10.9929pt too wide) in paragraph at lines 117--117
-\OT1/ptm/m/n/9 cou-
- []
-
-
-Overfull \hbox (8.99481pt too wide) in paragraph at lines 117--117
-\OT1/ptm/m/n/9 pler| 
- []
-
-
-! LaTeX Error: File `../figs/symbol_BondPad' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.118 ...0.22\linewidth]{../figs/symbol_BondPad} }
-                                                   \\
-? 
-
-Overfull \hbox (5.49393pt too wide) in paragraph at lines 118--118
-[]\OT1/ptm/m/n/9 (b)
- []
-
-
-Overfull \hbox (14.50293pt too wide) in paragraph at lines 118--118
-|\OT1/ptm/m/n/9 Bond
- []
-
-
-Overfull \hbox (8.36496pt too wide) in paragraph at lines 118--118
-\OT1/ptm/m/n/9 Pad| 
- []
-
-
-! LaTeX Error: File `../figs/symbol_YBranch' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.119 ...=0.3\linewidth]{../figs/symbol_YBranch} }
-                                                  
-? 
-
-Overfull \hbox (4.98987pt too wide) in paragraph at lines 119--119
-[]\OT1/ptm/m/n/9 (c)
- []
-
-
-Overfull \hbox (3.49594pt too wide) in paragraph at lines 119--119
-|\OT1/ptm/m/n/9 Y-
- []
-
-
-Overfull \hbox (20.99178pt too wide) in paragraph at lines 119--119
-\OT1/ptm/m/n/9 Branch| 
- []
-
-
-! LaTeX Error: File `../figs/symbol_RingMod' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.120 ...=0.2\linewidth]{../figs/symbol_RingMod} }
-                                                  
-? 
-
-Overfull \hbox (5.49393pt too wide) in paragraph at lines 120--120
-[]\OT1/ptm/m/n/9 (d)
- []
-
-
-Overfull \hbox (12.50484pt too wide) in paragraph at lines 120--120
-|\OT1/ptm/m/n/9 Ring
- []
-
-
-Overfull \hbox (14.99786pt too wide) in paragraph at lines 120--120
-\OT1/ptm/m/n/9 Mod-
- []
-
-
-Overfull \hbox (2.49696pt too wide) in paragraph at lines 120--120
-\OT1/ptm/m/n/9 u-
- []
-
-
-Overfull \hbox (4.49481pt too wide) in paragraph at lines 120--120
-\OT1/ptm/m/n/9 la-
- []
-
-
-Overfull \hbox (4.99887pt too wide) in paragraph at lines 120--120
-\OT1/ptm/m/n/9 tor| 
- []
-
-
-LaTeX Warning: Reference `Symbols' on page 3 undefined on input line 132.
-
-
-LaTeX Warning: Reference `schematic_wdm2tx' on page 3 undefined on input line 1
-34.
-
-
-! LaTeX Error: File `../figs/schematic_wdm2tx' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.140 ...th=1\linewidth]{../figs/schematic_wdm2tx}
-                                                  
-? 
-[3]
+<use ../figs/schematic_wdm2tx.png>
+Package pdftex.def Info: ../figs/schematic_wdm2tx.png used on input line 140.
+(pdftex.def)             Requested size: 487.8225pt x 207.58284pt.
+ [3] [4 <../figs/symbol_GC.png> <../figs/symbol_BondPad.png> <../figs/symbol_YB
+ranch.png> <../figs/symbol_RingMod.png> <../figs/schematic_wdm2tx.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 162.
 
 
-LaTeX Warning: Citation `fiers2012time-domain' on page 4 undefined on input lin
+LaTeX Warning: Citation `fiers2012time-domain' on page 5 undefined on input lin
 e 162.
 
 
-LaTeX Warning: Citation `melati2012validation' on page 4 undefined on input lin
+LaTeX Warning: Citation `melati2012validation' on page 5 undefined on input lin
 e 162.
 
 
-LaTeX Warning: Citation `shibata1998generalized-scattering-matrix' on page 4 un
+LaTeX Warning: Citation `shibata1998generalized-scattering-matrix' on page 5 un
 defined on input line 162.
 
 
-LaTeX Warning: Citation `wartak2013computational' on page 4 undefined on input 
+LaTeX Warning: Citation `wartak2013computational' on page 5 undefined on input 
 line 164.
 
 
-LaTeX Warning: Citation `fiers2012time-domain' on page 4 undefined on input lin
+LaTeX Warning: Citation `fiers2012time-domain' on page 5 undefined on input lin
 e 164.
 
 
-LaTeX Warning: Citation `pinguet2011cmos' on page 4 undefined on input line 164
+LaTeX Warning: Citation `pinguet2011cmos' on page 5 undefined on input line 164
 .
 
 
-LaTeX Warning: Citation `fiers2012time-domain' on page 4 undefined on input lin
+LaTeX Warning: Citation `fiers2012time-domain' on page 5 undefined on input lin
 e 164.
 
-[4]
 
 LaTeX Warning: Citation `pinguet2011cmos' on page 5 undefined on input line 176
 .
@@ -955,11 +832,11 @@ LaTeX Warning: Citation `pinguet2011cmos' on page 5 undefined on input line 176
 LaTeX Warning: Citation `gunupudi2010self-consistent' on page 5 undefined on in
 put line 176.
 
+[5]
 
-LaTeX Warning: Citation `wang2013universal' on page 5 undefined on input line 1
+LaTeX Warning: Citation `wang2013universal' on page 6 undefined on input line 1
 91.
 
-[5]
 
 LaTeX Warning: Citation `gustavsen1999rational' on page 6 undefined on input li
 ne 199.
@@ -968,591 +845,139 @@ ne 199.
 LaTeX Warning: Citation `zeng2006modified' on page 6 undefined on input line 19
 9.
 
+[6] [7] <../figs/DC_diagram.png, id=134, 1231.60126pt x 876.27374pt>
+File: ../figs/DC_diagram.png Graphic file (type png)
 
-LaTeX Warning: Reference `DC_image1' on page 6 undefined on input line 209.
+<use ../figs/DC_diagram.png>
+Package pdftex.def Info: ../figs/DC_diagram.png used on input line 278.
+(pdftex.def)             Requested size: 195.126pt x 138.82945pt.
 
-[6]
+<../figs/Picture1.png, id=135, 425.4294pt x 378.6948pt>
+File: ../figs/Picture1.png Graphic file (type png)
 
-LaTeX Warning: Reference `DC_image1' on page 7 undefined on input line 213.
+<use ../figs/Picture1.png>
+Package pdftex.def Info: ../figs/Picture1.png used on input line 282.
+(pdftex.def)             Requested size: 195.126pt x 173.6932pt.
+ [8 <../figs/DC_diagram.png> <../figs/Picture1.png>]
 
-
-LaTeX Warning: Reference `S1121m' on page 7 undefined on input line 213.
-
-
-LaTeX Warning: Reference `EM' on page 7 undefined on input line 223.
-
-
-! LaTeX Error: File `../figs/DC_diagram' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.278    \end{overpic}  }
-                           % \hspace{2 cm}
-? 
-! Arithmetic overflow.
-\OVP@calc ...le \divide \@tempcnta by \unitlength 
-                                                  \fi \ifnum \count@ =\z@ \c...
-l.278    \end{overpic}  }
-                           % \hspace{2 cm}
-? 
-
-Overfull \hbox (4.98987pt too wide) in paragraph at lines 278--278
-[]\OT1/ptm/m/n/9 (a)
- []
-
-
-Overfull \hbox (18.49886pt too wide) in paragraph at lines 278--278
-|\OT1/ptm/m/n/9 FDTD
- []
-
-
-Overfull \hbox (11.00168pt too wide) in paragraph at lines 278--278
-\OT1/ptm/m/n/9 sim-
- []
-
-
-Overfull \hbox (2.49696pt too wide) in paragraph at lines 278--278
-\OT1/ptm/m/n/9 u-
- []
-
-
-Overfull \hbox (4.49481pt too wide) in paragraph at lines 278--278
-\OT1/ptm/m/n/9 la-
- []
-
-
-Overfull \hbox (9.00381pt too wide) in paragraph at lines 278--278
-\OT1/ptm/m/n/9 tion
- []
-
-
-Overfull \hbox (10.9929pt too wide) in paragraph at lines 278--278
-\OT1/ptm/m/n/9 con-
- []
-
-
-Overfull \hbox (7.5009pt too wide) in paragraph at lines 278--278
-\OT1/ptm/m/n/9 fig-
- []
-
-
-Overfull \hbox (2.49696pt too wide) in paragraph at lines 278--278
-\OT1/ptm/m/n/9 u-
- []
-
-
-Overfull \hbox (4.98987pt too wide) in paragraph at lines 278--278
-\OT1/ptm/m/n/9 ra-
- []
-
-
-Overfull \hbox (11.25381pt too wide) in paragraph at lines 278--278
-\OT1/ptm/m/n/9 tion.| 
- []
-
-
-LaTeX Warning: File `../figs/Picture1.png' not found on input line 282.
-
-
-! Package pdftex.def Error: File `../figs/Picture1.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.282 ...th=0.4\linewidth]{../figs/Picture1.png} }
-                                                  
-? 
-
-LaTeX Warning: Reference `S1121m' on page 7 undefined on input line 300.
-
-
-LaTeX Warning: Reference `DCSparam_passivity3' on page 7 undefined on input lin
-e 300.
-
-[7]
-
-LaTeX Warning: Citation `gustavsen2008fast' on page 8 undefined on input line 3
+LaTeX Warning: Citation `gustavsen2008fast' on page 9 undefined on input line 3
 08.
 
 
-LaTeX Warning: Citation `gustavsen1999rational' on page 8 undefined on input li
+LaTeX Warning: Citation `gustavsen1999rational' on page 9 undefined on input li
 ne 309.
 
 
-LaTeX Warning: Citation `gustavsen2006improving' on page 8 undefined on input l
+LaTeX Warning: Citation `gustavsen2006improving' on page 9 undefined on input l
 ine 309.
 
 
-LaTeX Warning: Citation `deschrijver2008macromodeling' on page 8 undefined on i
+LaTeX Warning: Citation `deschrijver2008macromodeling' on page 9 undefined on i
 nput line 309.
 
 
-LaTeX Warning: Citation `gustavsen2010fast' on page 8 undefined on input line 3
+LaTeX Warning: Citation `gustavsen2010fast' on page 9 undefined on input line 3
 15.
 
 
-LaTeX Warning: Citation `gustavsen2002computer' on page 8 undefined on input li
+LaTeX Warning: Citation `gustavsen2002computer' on page 9 undefined on input li
 ne 316.
 
 
-! LaTeX Error: File `../figs/DC_ringmod_type1_R=10,gap=180,Lc=0,wg=500,lambda=1
-550,mesh=2,angle=30,mat_abs_S21_S11_spie' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.329 ...0,mesh=2,angle=30,mat_abs_S21_S11_spie} }
-                                                    ~
-? 
-
-Overfull \hbox (4.98987pt too wide) in paragraph at lines 329--329
-[]\OT1/ptm/m/n/9 (a)
- []
-
-
-Overfull \hbox (12.50471pt too wide) in paragraph at lines 329--329
-|\OT1/ptm/m/n/9 Sim-
- []
-
-
-Overfull \hbox (2.49696pt too wide) in paragraph at lines 329--329
-\OT1/ptm/m/n/9 u-
- []
-
-
-Overfull \hbox (12.4957pt too wide) in paragraph at lines 329--329
-\OT1/ptm/m/n/9 lated
- []
-
-
-Overfull \hbox (3.0009pt too wide) in paragraph at lines 329--329
-\OT1/ptm/m/n/9 S-
- []
-
-
-Overfull \hbox (34.4824pt too wide) in paragraph at lines 329--329
-\OT1/ptm/m/n/9 parameters
- []
-
-
-Overfull \hbox (16.49178pt too wide) in paragraph at lines 329--329
-\OT1/ptm/m/n/9 (mag-
- []
-
-
-Overfull \hbox (4.99887pt too wide) in paragraph at lines 329--329
-\OT1/ptm/m/n/9 ni-
- []
-
-
-Overfull \hbox (15.74481pt too wide) in paragraph at lines 329--329
-\OT1/ptm/m/n/9 tude).| 
- []
-
-
-! LaTeX Error: File `../figs/DC_ringmod_type1_R=10,gap=180,Lc=0,wg=500,lambda=1
-550,mesh=2,angle=30_passivitytest3' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.331  }
-        
-? 
-
-Overfull \hbox (5.49393pt too wide) in paragraph at lines 331--331
-[]\OT1/ptm/m/n/9 (b)
- []
-
-
-Overfull \hbox (10.36282pt too wide) in paragraph at lines 331--331
-|\OT1/ptm/m/n/9 Pas-
- []
-
-
-Overfull \hbox (8.27477pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 siv-
- []
-
-
-Overfull \hbox (4.50381pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 ity
- []
-
-
-Overfull \hbox (7.50066pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 test
- []
-
-
-Overfull \hbox (4.0pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 on
- []
-
-
-Overfull \hbox (5.99785pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 the
- []
-
-
-Overfull \hbox (3.0009pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 S-
- []
-
-
-Overfull \hbox (34.4824pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 parameters
- []
-
-
-Overfull \hbox (6.4929pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 be-
- []
-
-
-Overfull \hbox (9.48987pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 fore
- []
-
-
-Overfull \hbox (7.99594pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 and
- []
-
-
-Overfull \hbox (4.98987pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 af-
- []
-
-
-Overfull \hbox (4.49481pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 ter
- []
-
-
-Overfull \hbox (11.48782pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 Vec-
- []
-
-
-Overfull \hbox (4.99887pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 tor
- []
-
-
-Overfull \hbox (8.00471pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 Fit-
- []
-
-
-Overfull \hbox (9.00381pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 ting
- []
-
-
-Overfull \hbox (7.99594pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 and
- []
-
-
-Overfull \hbox (10.36282pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 Pas-
- []
-
-
-Overfull \hbox (8.27477pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 siv-
- []
-
-
-Overfull \hbox (4.50381pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 ity
- []
-
-
-Overfull \hbox (7.99594pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 En-
- []
-
-
-Overfull \hbox (16.48277pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 force-
- []
-
-
-Overfull \hbox (15.24976pt too wide) in paragraph at lines 331--331
-\OT1/ptm/m/n/9 ment.| 
- []
-
-
-! LaTeX Error: File `../figs/INT_ONA_DCring2' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.340 ...0.5\linewidth]{../figs/INT_ONA_DCring2} }
-                                                   ~ ~ ~
-? 
-
-Overfull \hbox (4.98987pt too wide) in paragraph at lines 340--340
-[]\OT1/ptm/m/n/9 (a)
- []
-
-
-Overfull \hbox (32.49342pt too wide) in paragraph at lines 340--340
-|\OT1/ptm/m/n/9 Schematic
- []
-
-
-Overfull \hbox (4.99887pt too wide) in paragraph at lines 340--340
-\OT1/ptm/m/n/9 di-
- []
-
-
-Overfull \hbox (1.9929pt too wide) in paragraph at lines 340--340
-\OT1/ptm/m/n/9 a-
- []
-
-
-Overfull \hbox (15.74481pt too wide) in paragraph at lines 340--340
-\OT1/ptm/m/n/9 gram,
- []
-
-
-Overfull \hbox (15.9966pt too wide) in paragraph at lines 340--340
-\OT1/ptm/m/n/9 tested
- []
-
-
-Overfull \hbox (11.00179pt too wide) in paragraph at lines 340--340
-\OT1/ptm/m/n/9 with
- []
-
-
-Overfull \hbox (3.49594pt too wide) in paragraph at lines 340--340
-\OT1/ptm/m/n/9 an
- []
-
-
-Overfull \hbox (8.99493pt too wide) in paragraph at lines 340--340
-\OT1/ptm/m/n/9 Op-
- []
-
-
-Overfull \hbox (3.00078pt too wide) in paragraph at lines 340--340
-\OT1/ptm/m/n/9 ti-
- []
-
-
-Overfull \hbox (5.49379pt too wide) in paragraph at lines 340--340
-\OT1/ptm/m/n/9 cal
- []
-
-
-Overfull \hbox (10.99278pt too wide) in paragraph at lines 340--340
-\OT1/ptm/m/n/9 Net-
- []
-
-
-Overfull \hbox (13.40494pt too wide) in paragraph at lines 340--340
-\OT1/ptm/m/n/9 work
- []
-
-
-Overfull \hbox (8.99493pt too wide) in paragraph at lines 340--340
-\OT1/ptm/m/n/9 An-
- []
-
-
-Overfull \hbox (1.9929pt too wide) in paragraph at lines 340--340
-\OT1/ptm/m/n/9 a-
- []
-
-
-Overfull \hbox (14.74582pt too wide) in paragraph at lines 340--340
-\OT1/ptm/m/n/9 lyzer.| 
- []
-
-
-! LaTeX Error: File `../figs/a_1' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.342 ...phics[width=0.3\linewidth]{../figs/a_1} }
-                                                  
-? 
-
-Overfull \hbox (5.49393pt too wide) in paragraph at lines 342--342
-[]\OT1/ptm/m/n/9 (b)
- []
-
-
-Overfull \hbox (8.99493pt too wide) in paragraph at lines 342--342
-|\OT1/ptm/m/n/9 Op-
- []
-
-
-Overfull \hbox (3.00078pt too wide) in paragraph at lines 342--342
-\OT1/ptm/m/n/9 ti-
- []
-
-
-Overfull \hbox (5.49379pt too wide) in paragraph at lines 342--342
-\OT1/ptm/m/n/9 cal
- []
-
-
-Overfull \hbox (13.98975pt too wide) in paragraph at lines 342--342
-\OT1/ptm/m/n/9 spec-
- []
-
-
-Overfull \hbox (12.00078pt too wide) in paragraph at lines 342--342
-\OT1/ptm/m/n/9 trum
- []
-
-
-Overfull \hbox (2.49696pt too wide) in paragraph at lines 342--342
-\OT1/ptm/m/n/9 of
- []
-
-
-Overfull \hbox (5.99785pt too wide) in paragraph at lines 342--342
-\OT1/ptm/m/n/9 the
- []
-
-
-Overfull \hbox (7.31181pt too wide) in paragraph at lines 342--342
-\OT1/ptm/m/n/9 cir-
- []
-
-
-Overfull \hbox (10.74976pt too wide) in paragraph at lines 342--342
-\OT1/ptm/m/n/9 cuit.| 
- []
-
-[8] [9]
-
-LaTeX Warning: Reference `INT_DC' on page 10 undefined on input line 351.
-
-
-LaTeX Warning: Reference `INT_ONA_DCring' on page 10 undefined on input line 35
-1.
-
-
-LaTeX Warning: Reference `layout_wdm2tx_unrouted' on page 10 undefined on input
- line 367.
-
-
-! LaTeX Error: File `../figs/layout_wdm2tx_unrouted' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.373 ...inewidth]{../figs/layout_wdm2tx_unrouted}
-                                                  
-? 
-
-LaTeX Warning: Reference `layout_wdm2tx_routed' on page 10 undefined on input l
-ine 378.
-
-
-! LaTeX Error: File `../figs/layout_wdm2tx_routed' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.382 ...\linewidth]{../figs/layout_wdm2tx_routed}
-                                                  
-? 
-
-LaTeX Warning: Reference `BezierBends1' on page 10 undefined on input line 389.
-
-
-
-LaTeX Warning: Reference `BezierBends2' on page 10 undefined on input line 389.
-
-
-
-LaTeX Warning: Citation `bogaerts2011compact' on page 10 undefined on input lin
+<../figs/DC_ringmod_type1_R=10,gap=180,Lc=0,wg=500,lambda=1550,mesh=2,angle=30,
+mat_abs_S21_S11_spie.pdf, id=143, 530.98375pt x 416.55624pt>
+File: ../figs/DC_ringmod_type1_R=10,gap=180,Lc=0,wg=500,lambda=1550,mesh=2,angl
+e=30,mat_abs_S21_S11_spie.pdf Graphic file (type pdf)
+
+<use ../figs/DC_ringmod_type1_R=10,gap=180,Lc=0,wg=500,lambda=1550,mesh=2,angle
+=30,mat_abs_S21_S11_spie.pdf>
+Package pdftex.def Info: ../figs/DC_ringmod_type1_R=10,gap=180,Lc=0,wg=500,lamb
+da=1550,mesh=2,angle=30,mat_abs_S21_S11_spie.pdf used on input line 329.
+(pdftex.def)             Requested size: 234.15271pt x 183.6921pt.
+
+<../figs/DC_ringmod_type1_R=10,gap=180,Lc=0,wg=500,lambda=1550,mesh=2,angle=30_
+passivitytest3.pdf, id=144, page=1, 525.965pt x 397.485pt>
+File: ../figs/DC_ringmod_type1_R=10,gap=180,Lc=0,wg=500,lambda=1550,mesh=2,angl
+e=30_passivitytest3.pdf Graphic file (type pdf)
+
+<use ../figs/DC_ringmod_type1_R=10,gap=180,Lc=0,wg=500,lambda=1550,mesh=2,angle
+=30_passivitytest3.pdf, page 1>
+Package pdftex.def Info: ../figs/DC_ringmod_type1_R=10,gap=180,Lc=0,wg=500,lamb
+da=1550,mesh=2,angle=30_passivitytest3.pdf, page1 used on input line 331.
+(pdftex.def)             Requested size: 234.15271pt x 176.95607pt.
+
+<../figs/INT_ONA_DCring2.png, id=145, 1227.58624pt x 845.1575pt>
+File: ../figs/INT_ONA_DCring2.png Graphic file (type png)
+
+<use ../figs/INT_ONA_DCring2.png>
+Package pdftex.def Info: ../figs/INT_ONA_DCring2.png used on input line 340.
+(pdftex.def)             Requested size: 243.91124pt x 167.91945pt.
+
+<../figs/a_1.pdf, id=146, 549.05125pt x 403.5075pt>
+File: ../figs/a_1.pdf Graphic file (type pdf)
+ <use ../figs/a_1.pdf>
+Package pdftex.def Info: ../figs/a_1.pdf used on input line 342.
+(pdftex.def)             Requested size: 146.34824pt x 107.55083pt.
+
+[9 <../figs/DC_ringmod_type1_R=10,gap=180,Lc=0,wg=500,lambda=1550,mesh=2,angle=
+30,mat_abs_S21_S11_spie.pdf> <../figs/DC_ringmod_type1_R=10,gap=180,Lc=0,wg=500
+,lambda=1550,mesh=2,angle=30_passivitytest3.pdf>]
+<../figs/layout_wdm2tx_unrouted.png, id=169, 1469.49pt x 756.8275pt>
+File: ../figs/layout_wdm2tx_unrouted.png Graphic file (type png)
+
+<use ../figs/layout_wdm2tx_unrouted.png>
+Package pdftex.def Info: ../figs/layout_wdm2tx_unrouted.png used on input line 
+373.
+(pdftex.def)             Requested size: 341.47424pt x 175.86818pt.
+
+<../figs/layout_wdm2tx_routed.png, id=170, 1463.4675pt x 755.82375pt>
+File: ../figs/layout_wdm2tx_routed.png Graphic file (type png)
+
+<use ../figs/layout_wdm2tx_routed.png>
+Package pdftex.def Info: ../figs/layout_wdm2tx_routed.png used on input line 38
+2.
+(pdftex.def)             Requested size: 341.47424pt x 176.34998pt.
+ [10 <../figs/INT_ONA_DCring2.png> <../figs/a_1.pdf> <../figs/layout_wdm2tx_unr
+outed.png>]
+
+LaTeX Warning: Citation `bogaerts2011compact' on page 11 undefined on input lin
 e 389.
 
 
-LaTeX Warning: Citation `cherchi2013dramatic' on page 10 undefined on input lin
+LaTeX Warning: Citation `cherchi2013dramatic' on page 11 undefined on input lin
 e 389.
 
+<../figs/Bends1-key-crop.pdf, id=184, page=1, 221.82875pt x 222.8325pt>
+File: ../figs/Bends1-key-crop.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `BezierBends3' on page 10 undefined on input line 389.
+<use ../figs/Bends1-key-crop.pdf, page 1>
+Package pdftex.def Info: ../figs/Bends1-key-crop.pdf, page1 used on input line 
+392.
+(pdftex.def)             Requested size: 97.563pt x 98.0024pt.
 
+<../figs/Bends1-key-crop.pdf, id=185, page=2, 221.82875pt x 221.82875pt>
+File: ../figs/Bends1-key-crop.pdf Graphic file (type pdf)
 
+<use ../figs/Bends1-key-crop.pdf, page 2>
+Package pdftex.def Info: ../figs/Bends1-key-crop.pdf, page2 used on input line 
+393.
+(pdftex.def)             Requested size: 97.563pt x 97.56093pt.
 
-LaTeX Warning: File `../figs/Bends1-key-crop.pdf' not found on input line 392.
+<../figs/Bends1-key-crop.pdf, id=186, page=3, 221.82875pt x 221.82875pt>
+File: ../figs/Bends1-key-crop.pdf Graphic file (type pdf)
 
+<use ../figs/Bends1-key-crop.pdf, page 3>
+Package pdftex.def Info: ../figs/Bends1-key-crop.pdf, page3 used on input line 
+394.
+(pdftex.def)             Requested size: 97.563pt x 97.56093pt.
 
-! Package pdftex.def Error: File `../figs/Bends1-key-crop.pdf' not found.
+<../figs/bezier_bendloss1.pdf, id=187, 525.965pt x 409.53pt>
+File: ../figs/bezier_bendloss1.pdf Graphic file (type pdf)
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.392 ...angle=180]{../figs/Bends1-key-crop.pdf} }
-                                                   ~ ~
-? 
+<use ../figs/bezier_bendloss1.pdf>
+Package pdftex.def Info: ../figs/bezier_bendloss1.pdf used on input line 404.
+(pdftex.def)             Requested size: 243.91124pt x 189.91707pt.
 
-LaTeX Warning: File `../figs/Bends1-key-crop.pdf' not found on input line 393.
-
-
-! Package pdftex.def Error: File `../figs/Bends1-key-crop.pdf' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.393 ...angle=180]{../figs/Bends1-key-crop.pdf} }
-                                                   ~ ~
-? 
-
-LaTeX Warning: File `../figs/Bends1-key-crop.pdf' not found on input line 394.
-
-
-! Package pdftex.def Error: File `../figs/Bends1-key-crop.pdf' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.394 ...angle=180]{../figs/Bends1-key-crop.pdf} }
-                                                  
-? 
-
-LaTeX Warning: Reference `bezierresults' on page 10 undefined on input line 400
-.
-
-
-LaTeX Warning: File `../figs/bezier_bendloss1.pdf' not found on input line 404.
-
-
-
-! Package pdftex.def Error: File `../figs/bezier_bendloss1.pdf' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.404 ...\linewidth]{../figs/bezier_bendloss1.pdf}
-                                                  
-? 
-[10]
 
 LaTeX Warning: Citation `bogaerts2011compact' on page 11 undefined on input lin
 e 410.
@@ -1569,194 +994,103 @@ e 410.
 LaTeX Warning: Citation `li2012ultralow-loss' on page 11 undefined on input lin
 e 410.
 
+[11 <../figs/layout_wdm2tx_routed.png> <../figs/Bends1-key-crop.pdf> <../figs/B
+ends1-key-crop.pdf> <../figs/Bends1-key-crop.pdf>]
 
-LaTeX Warning: Citation `bogaerts2007low-loss' on page 11 undefined on input li
+LaTeX Warning: Citation `bogaerts2007low-loss' on page 12 undefined on input li
 ne 414.
 
 
-LaTeX Warning: Citation `zhang2013a-cmos-compatible' on page 11 undefined on in
+LaTeX Warning: Citation `zhang2013a-cmos-compatible' on page 12 undefined on in
 put line 414.
 
 
-LaTeX Warning: Citation `bogaerts2007low-loss' on page 11 undefined on input li
+LaTeX Warning: Citation `bogaerts2007low-loss' on page 12 undefined on input li
 ne 414.
 
-[11]
+<../figs/layout_wdm2tx_done.png, id=234, 1456.44125pt x 757.83125pt>
+File: ../figs/layout_wdm2tx_done.png Graphic file (type png)
 
-! LaTeX Error: File `../figs/layout_wdm2tx_done' not found.
+<use ../figs/layout_wdm2tx_done.png>
+Package pdftex.def Info: ../figs/layout_wdm2tx_done.png used on input line 420.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.420 ....7\linewidth]{../figs/layout_wdm2tx_done}
-                                                  
-? 
+(pdftex.def)             Requested size: 341.47424pt x 177.67407pt.
 
-LaTeX Warning: Reference `DRC1' on page 12 undefined on input line 429.
+<../figs/DRC2a.png, id=235, 1927.2pt x 1204.5pt>
+File: ../figs/DRC2a.png Graphic file (type png)
+ <use ../figs/DRC2a.png>
+Package pdftex.def Info: ../figs/DRC2a.png used on input line 434.
+(pdftex.def)             Requested size: 229.27716pt x 143.28398pt.
 
+<../figs/DRC2b.png, id=236, 1927.2pt x 1204.5pt>
+File: ../figs/DRC2b.png Graphic file (type png)
+ <use ../figs/DRC2b.png>
+Package pdftex.def Info: ../figs/DRC2b.png used on input line 435.
+(pdftex.def)             Requested size: 229.27716pt x 143.28398pt.
 
-! LaTeX Error: File `../figs/DRC2a' not found.
+[12 <../figs/bezier_bendloss1.pdf> <../figs/layout_wdm2tx_done.png>]
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.434 ...cs[width=0.47\linewidth]{../figs/DRC2a} }
-                                                    ~
-? 
-
-Overfull \hbox (4.98987pt too wide) in paragraph at lines 434--434
-[]\OT1/ptm/m/n/9 (a)
- []
-
-
-Overfull \hbox (12.99977pt too wide) in paragraph at lines 434--434
-|\OT1/ptm/m/n/9 Min-
- []
-
-
-Overfull \hbox (13.50381pt too wide) in paragraph at lines 434--434
-\OT1/ptm/m/n/9 mum
- []
-
-
-Overfull \hbox (14.98872pt too wide) in paragraph at lines 434--434
-\OT1/ptm/m/n/9 space
- []
-
-
-Overfull \hbox (4.8099pt too wide) in paragraph at lines 434--434
-\OT1/ptm/m/n/9 er-
- []
-
-
-Overfull \hbox (5.49393pt too wide) in paragraph at lines 434--434
-\OT1/ptm/m/n/9 ror
- []
-
-
-Overfull \hbox (23.74582pt too wide) in paragraph at lines 434--434
-\OT1/ptm/m/n/9 flagged.| 
- []
-
-
-! LaTeX Error: File `../figs/DRC2b' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.435 ...cs[width=0.47\linewidth]{../figs/DRC2b} }
-                                                  
-? 
-
-Overfull \hbox (5.49393pt too wide) in paragraph at lines 435--435
-[]\OT1/ptm/m/n/9 (b)
- []
-
-
-Overfull \hbox (11.99178pt too wide) in paragraph at lines 435--435
-|\OT1/ptm/m/n/9 User
- []
-
-
-Overfull \hbox (11.86586pt too wide) in paragraph at lines 435--435
-\OT1/ptm/m/n/9 fixes
- []
-
-
-Overfull \hbox (4.8099pt too wide) in paragraph at lines 435--435
-\OT1/ptm/m/n/9 er-
- []
-
-
-Overfull \hbox (7.99583pt too wide) in paragraph at lines 435--435
-\OT1/ptm/m/n/9 ror;
- []
-
-
-Overfull \hbox (8.49988pt too wide) in paragraph at lines 435--435
-\OT1/ptm/m/n/9 flag
- []
-
-
-Overfull \hbox (1.0028pt too wide) in paragraph at lines 435--435
-\OT1/ptm/m/n/9 is
- []
-
-
-Overfull \hbox (4.98987pt too wide) in paragraph at lines 435--435
-\OT1/ptm/m/n/9 re-
- []
-
-
-Overfull \hbox (21.47801pt too wide) in paragraph at lines 435--435
-\OT1/ptm/m/n/9 moved.| 
- []
-
-
-LaTeX Warning: Citation `wang2011uniform' on page 12 undefined on input line 45
+LaTeX Warning: Citation `wang2011uniform' on page 13 undefined on input line 45
 2.
 
 
-LaTeX Warning: Citation `wang2011uniform' on page 12 undefined on input line 45
+LaTeX Warning: Citation `wang2011uniform' on page 13 undefined on input line 45
 2.
 
 
-LaTeX Warning: Citation `bogaerts2008closed-loop' on page 12 undefined on input
+LaTeX Warning: Citation `bogaerts2008closed-loop' on page 13 undefined on input
  line 452.
 
 
-LaTeX Warning: Citation `adam2003improved' on page 12 undefined on input line 4
+LaTeX Warning: Citation `adam2003improved' on page 13 undefined on input line 4
 52.
 
 
-LaTeX Warning: Citation `wang2012lithography' on page 12 undefined on input lin
+LaTeX Warning: Citation `wang2012lithography' on page 13 undefined on input lin
 e 452.
 
 
-LaTeX Warning: Citation `cooper2010235-ring' on page 12 undefined on input line
+LaTeX Warning: Citation `cooper2010235-ring' on page 13 undefined on input line
  457.
 
 
-LaTeX Warning: Citation `zortman2010silicon' on page 12 undefined on input line
+LaTeX Warning: Citation `zortman2010silicon' on page 13 undefined on input line
  457.
 
 
-LaTeX Warning: Citation `krishnamoorthy2011exploiting' on page 12 undefined on 
+LaTeX Warning: Citation `krishnamoorthy2011exploiting' on page 13 undefined on 
 input line 457.
 
 
-LaTeX Warning: Citation `selvaraja2010subnanometer' on page 12 undefined on inp
+LaTeX Warning: Citation `selvaraja2010subnanometer' on page 13 undefined on inp
 ut line 457.
 
 
-LaTeX Warning: Citation `wang2012narrow-band' on page 12 undefined on input lin
+LaTeX Warning: Citation `wang2012narrow-band' on page 13 undefined on input lin
 e 457.
 
-[12]
 
 LaTeX Warning: Citation `chrostowski2014impact' on page 13 undefined on input l
 ine 459.
 
+[13 <../figs/DRC2a.png> <../figs/DRC2b.png>]
 No file SPIE_2014_lukasc_v2b.bbl.
-[13] (./SPIE_2014_lukasc_v2b.aux)
+[14] (./SPIE_2014_lukasc_v2b.aux)
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 12404 strings out of 493315
- 260051 string characters out of 6137904
- 262610 words of memory out of 5000000
- 15639 multiletter control sequences out of 15000+600000
+ 12479 strings out of 493315
+ 263685 string characters out of 6137904
+ 262085 words of memory out of 5000000
+ 15724 multiletter control sequences out of 15000+600000
  29905 words of font info for 66 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 44i,9n,47p,1582b,587s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,9n,47p,1582b,583s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/tex
@@ -1771,10 +1105,10 @@ mf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on SPIE_2014_lukasc_v2b.pdf (13 pages, 167140 bytes).
+Output written on SPIE_2014_lukasc_v2b.pdf (14 pages, 2111169 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
+ 301 PDF objects out of 1000 (max. 8388607)
+ 191 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
