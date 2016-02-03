@@ -1,54 +1,58 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
+This is BibTeX, Version 0.99d (TeX Live 2013)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: SPIE_2014_lukasc_v2b.aux
 The style file: spiebib33.bst
 Database file #1: ../Refs/references.bib
 Warning--entry type for "adam2003improved" isn't style-file defined
---line 12 of file ../Refs/references.bib
+--line 83 of file ../Refs/references.bib
+Warning--entry type for "www_klayout" isn't style-file defined
+--line 684 of file ../Refs/references.bib
 Warning--empty title in melati2012validation
 Warning--empty volume in melati2012validation
 Warning--empty volume in zeng2006modified
 Warning--empty volume in cooper2010235-ring
 Warning--empty volume in chrostowski2014impact
-You've used 29 entries,
+Warning--empty volume in lukas14:OFC
+Warning--empty year in www_klayout
+You've used 33 entries,
             1993 wiz_defined-function locations,
-            679 strings with 10278 characters,
-and the built_in function-call counts, 9663 in all, are:
-= -- 911
-> -- 455
+            700 strings with 10965 characters,
+and the built_in function-call counts, 11037 in all, are:
+= -- 1037
+> -- 528
 < -- 0
-+ -- 162
-- -- 133
-* -- 856
-:= -- 1293
-add.period$ -- 29
-call.type$ -- 29
-change.case$ -- 28
++ -- 188
+- -- 155
+* -- 969
+:= -- 1472
+add.period$ -- 33
+call.type$ -- 33
+change.case$ -- 31
 chr.to.int$ -- 0
-cite$ -- 34
-duplicate$ -- 427
-empty$ -- 802
-format.name$ -- 133
-if$ -- 2305
+cite$ -- 40
+duplicate$ -- 490
+empty$ -- 913
+format.name$ -- 155
+if$ -- 2633
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 29
-newline$ -- 90
-num.names$ -- 31
-pop$ -- 53
+int.to.str$ -- 33
+missing$ -- 32
+newline$ -- 102
+num.names$ -- 35
+pop$ -- 61
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 399
+skip$ -- 468
 stack$ -- 0
-substring$ -- 774
-swap$ -- 277
+substring$ -- 876
+swap$ -- 319
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 5
-while$ -- 90
-width$ -- 31
-write$ -- 257
-(There were 6 warnings)
+warning$ -- 7
+while$ -- 101
+width$ -- 35
+write$ -- 290
+(There were 9 warnings)
