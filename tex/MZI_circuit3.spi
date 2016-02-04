@@ -1,0 +1,24 @@
+.subckt MZI_circuit N$0 N$1
+  ebeam_bdc_te1550_0  N$2 N$3 N$4 N$5 ebeam_bdc_te1550 library="Design kits/ebeam_v1.2"  lay_x=-94.35E-6 lay_y=7.35E-6 sch_x=-4.7175E0 sch_y=367.5E-3 
+  ebeam_gc_te1550_1  N$0 N$6 ebeam_gc_te1550 library="Design kits/ebeam_v1.2"  lay_x=-149.8E-6 lay_y=-117.3E-6 sch_x=-7.49E0 sch_y=-5.865E0 
+  ebeam_gc_te1550_2  N$1 N$7 ebeam_gc_te1550 library="Design kits/ebeam_v1.2"  lay_x=-149.8E-6 lay_y=9.7E-6 sch_x=-7.49E0 sch_y=485.0E-3 
+  ebeam_bdc_te1550_3  N$8 N$9 N$10 N$11 ebeam_bdc_te1550 library="Design kits/ebeam_v1.2"  lay_x=-94.35E-6 lay_y=-119.65E-6 sch_x=-4.7175E0 sch_y=-5.9825E0 
+  ebeam_terminator_te1550_4  N$3 ebeam_terminator_te1550 library="Design kits/ebeam_v1.2"  lay_x=-129.8E-6 lay_y=5.0E-6 sch_x=-6.49E0 sch_y=250.0E-3 
+  ebeam_terminator_te1550_5  N$9 ebeam_terminator_te1550 library="Design kits/ebeam_v1.2"  lay_x=-129.8E-6 lay_y=-122.0E-6 sch_x=-6.49E0 sch_y=-6.1E0 
+  wg0 N$5 N$10 ebeam_wg_integral_1550 library="Design kits/ebeam_v1.2" wg_length=144.727E-6 wg_width=500.0E-9 sch_x=-2.6185E0 sch_y=-2.8075E0 points="((-59050, 5000), (-45690, 5000), (-45690, -117300), (-59050, -117300))"
+  wg1 N$11 N$4 ebeam_wg_integral_1550 library="Design kits/ebeam_v1.2" wg_length=162.827E-6 wg_width=500.0E-9 sch_x=-2.50975E0 sch_y=-2.8075E0 points="((-59050, -122000), (-41340, -122000), (-41340, 9700), (-59050, 9700))"
+  wg2 N$7 N$2 ebeam_wg_integral_1550 library="Design kits/ebeam_v1.2" wg_length=20.0E-6 wg_width=500.0E-9 sch_x=-6.99E0 sch_y=485.0E-3 points="((-149800, 9700), (-139800, 9700), (-139800, 9700), (-129800, 9700))"
+  wg3 N$6 N$8 ebeam_wg_integral_1550 library="Design kits/ebeam_v1.2" wg_length=20.0E-6 wg_width=500.0E-9 sch_x=-6.99125E0 sch_y=-5.865E0 points="((-149800, -117300), (-139850, -117300), (-139850, -117300), (-129800, -117300))"
+.ends MZI_circuit
+
+* Optical Network Analyzer:
+.ona input_unit=wavelength input_parameter=start_and_stop
+  + minimum_loss=50
+  + analysis_type=scattering_data
+  + multithreading=user_defined number_of_threads=1
+  + start=1500.000e-9
+  + stop=1600.000e-9
+  + number_of_points=2000
+  + input(1)=MZI_circuit,N$0
+  + output=MZI_circuit,N$1
+MZI_circuit N$0 N$1 MZI_circuit sch_x=-1 sch_y=-1

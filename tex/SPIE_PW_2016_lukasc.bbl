@@ -1,5 +1,28 @@
 \begin{thebibliography}{1}
 
+\bibitem{chrostowski2014design}
+Chrostowski, L., Flueckiger, J., Lin, C., Hochberg, M., Pond, J., Klein, J.,
+  Ferguson, J., and Cone, C., ``Design methodologies for silicon photonic
+  integrated circuits,'' {\em Proc. SPIE, Smart Photonic and Optoelectronic
+  Integrated Circuits XVI}~{\bf 8989},  8989--15 (Feb. 2014).
+
+\bibitem{chrostowski2015silicon}
+Chrostowski, L. and Hochberg, M.,  [{\em Silicon Photonics Design: From Devices
+  to Systems}{\nolinebreak\hspace{0.1em}]}, Cambridge University Press (2015).
+
+\bibitem{lu2015broadband}
+Lu, Z., Yun, H., Wang, Y., Chen, Z., Zhang, F., Jaeger, N. A.~F., and
+  Chrostowski, L., ``Broadband silicon photonic directional coupler using
+  asymmetric-waveguide based phase control,'' {\em Opt. Express}~{\bf 23},
+  3795--3808 (Feb 2015).
+
+\bibitem{www_klayout}
+K{\"o}fferlein, M., ``{KLayout},'' {\em \url{http://www.klayout.de}} .
+
+\bibitem{siepic-ebeam-pdk}
+Chrostowski, L., ``{SiEPIC EBeam PDK} \& {L}ibrary for {KLayout},'' {\em
+  \url{http://github.com/lukasc-ubc/SiEPIC_EBeam_PDK}} .
+
 \bibitem{lukas14:OFC}
 Chrostowski, L., Wang, X., Flueckiger, J., Wu, Y., Wang, Y., and Fard, S.~T.,
   ``Impact of fabrication non-uniformity on chip-scale silicon photonic
@@ -17,8 +40,5 @@ Weng, T.-W., Zhang, Z., Su, Z., Marzouk, Y., Melloni, A., and Daniel, L.,
   ``Uncertainty quantification of silicon photonic devices with correlated and
   non-gaussian random parameters,'' {\em Opt. Express}~{\bf 23},  4242--4254
   (Feb 2015).
-
-\bibitem{www_klayout}
-www.klayout.de.
 
 \end{thebibliography}

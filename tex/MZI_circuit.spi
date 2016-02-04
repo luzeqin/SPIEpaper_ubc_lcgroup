@@ -1,0 +1,32 @@
+.subckt MZI_circuit N$0 N$1
+  ebeam_bdc_te1550_0  N$2 N$3 N$4 N$5 ebeam_bdc_te1550 library="Design kits/ebeam_v1.2"  lay_x=-94.35E-6 lay_y=7.35E-6 sch_x=-4.7175E0 sch_y=367.5E-3 
+  ebeam_gc_te1550_1  N$0 N$6 ebeam_gc_te1550 library="Design kits/ebeam_v1.2"  lay_x=-149.8E-6 lay_y=-117.3E-6 sch_x=-7.49E0 sch_y=-5.865E0 
+  ebeam_gc_te1550_2  N$1 N$7 ebeam_gc_te1550 library="Design kits/ebeam_v1.2"  lay_x=-149.8E-6 lay_y=9.7E-6 sch_x=-7.49E0 sch_y=485.0E-3 
+  ebeam_bdc_te1550_3  N$8 N$9 N$10 N$11 ebeam_bdc_te1550 library="Design kits/ebeam_v1.2"  lay_x=-94.35E-6 lay_y=-119.65E-6 sch_x=-4.7175E0 sch_y=-5.9825E0 
+  ebeam_terminator_te1550_4  N$3 ebeam_terminator_te1550 library="Design kits/ebeam_v1.2"  lay_x=-129.8E-6 lay_y=5.0E-6 sch_x=-6.49E0 sch_y=250.0E-3 
+  ebeam_terminator_te1550_5  N$9 ebeam_terminator_te1550 library="Design kits/ebeam_v1.2"  lay_x=-129.8E-6 lay_y=-122.0E-6 sch_x=-6.49E0 sch_y=-6.1E0 
+  ebeam_bend_1550_6  N$12 N$13 ebeam_bend_1550 library="Design kits/ebeam_v1.2" radius=5.000u wg_width=0.500u lay_x=-45.69E-6 lay_y=5.0E-6 sch_x=-2.2845E0 sch_y=250.0E-3  sch_r=180 sch_f=true
+  ebeam_bend_1550_7  N$14 N$15 ebeam_bend_1550 library="Design kits/ebeam_v1.2" radius=5.000u wg_width=0.500u lay_x=-45.69E-6 lay_y=-117.3E-6 sch_x=-2.2845E0 sch_y=-5.865E0  sch_r=270
+  ebeam_wg_integral_1550_8  N$13 N$14 ebeam_wg_integral_1550 library="Design kits/ebeam_v1.2" wg_width=0.500u wg_length=112.300u lay_x=-45.69E-6 lay_y=-56.15E-6 sch_x=-2.2845E0 sch_y=-2.8075E0  sch_r=90
+  ebeam_wg_integral_1550_9  N$5 N$12 ebeam_wg_integral_1550 library="Design kits/ebeam_v1.2" wg_width=0.500u wg_length=8.360u lay_x=-54.87E-6 lay_y=5.0E-6 sch_x=-2.7435E0 sch_y=250.0E-3 
+  ebeam_wg_integral_1550_10  N$15 N$10 ebeam_wg_integral_1550 library="Design kits/ebeam_v1.2" wg_width=0.500u wg_length=8.360u lay_x=-54.87E-6 lay_y=-117.3E-6 sch_x=-2.7435E0 sch_y=-5.865E0  sch_r=180
+  ebeam_bend_1550_11  N$16 N$17 ebeam_bend_1550 library="Design kits/ebeam_v1.2" radius=5.000u wg_width=0.500u lay_x=-25.36E-6 lay_y=-122.0E-6 sch_x=-1.268E0 sch_y=-6.1E0 
+  ebeam_bend_1550_12  N$18 N$19 ebeam_bend_1550 library="Design kits/ebeam_v1.2" radius=5.000u wg_width=0.500u lay_x=-25.36E-6 lay_y=9.7E-6 sch_x=-1.268E0 sch_y=485.0E-3  sch_r=270
+  ebeam_wg_integral_1550_13  N$17 N$18 ebeam_wg_integral_1550 library="Design kits/ebeam_v1.2" wg_width=0.500u wg_length=121.700u lay_x=-25.36E-6 lay_y=-56.15E-6 sch_x=-1.268E0 sch_y=-2.8075E0  sch_r=270
+  ebeam_wg_integral_1550_14  N$11 N$16 ebeam_wg_integral_1550 library="Design kits/ebeam_v1.2" wg_width=0.500u wg_length=28.690u lay_x=-44.705E-6 lay_y=-122.0E-6 sch_x=-2.23525E0 sch_y=-6.1E0 
+  ebeam_wg_integral_1550_15  N$19 N$4 ebeam_wg_integral_1550 library="Design kits/ebeam_v1.2" wg_width=0.500u wg_length=28.690u lay_x=-44.705E-6 lay_y=9.7E-6 sch_x=-2.23525E0 sch_y=485.0E-3  sch_r=180
+  ebeam_wg_integral_1550_16  N$7 N$2 ebeam_wg_integral_1550 library="Design kits/ebeam_v1.2" wg_width=0.500u wg_length=20.000u lay_x=-139.8E-6 lay_y=9.7E-6 sch_x=-6.99E0 sch_y=485.0E-3 
+  ebeam_wg_integral_1550_17  N$6 N$8 ebeam_wg_integral_1550 library="Design kits/ebeam_v1.2" wg_width=0.500u wg_length=20.000u lay_x=-139.8E-6 lay_y=-117.3E-6 sch_x=-6.99E0 sch_y=-5.865E0 
+.ends MZI_circuit
+
+* Optical Network Analyzer:
+.ona input_unit=wavelength input_parameter=start_and_stop
+  + minimum_loss=50
+  + analysis_type=scattering_data
+  + multithreading=user_defined number_of_threads=1
+  + start=1500.000e-9
+  + stop=1600.000e-9
+  + number_of_points=2000
+  + input(1)=MZI_circuit,N$0
+  + output=MZI_circuit,N$1
+MZI_circuit N$0 N$1 MZI_circuit sch_x=-1 sch_y=-1
