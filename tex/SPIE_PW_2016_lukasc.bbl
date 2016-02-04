@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{lukas14:OFC}
+Chrostowski, L., Wang, X., Flueckiger, J., Wu, Y., Wang, Y., and Fard, S.~T.,
+  ``Impact of fabrication non-uniformity on chip-scale silicon photonic
+  integrated circuits,'' in [{\em Optical Fiber Communication
+  Conference}{\nolinebreak\hspace{0.1em}]},  {\em Optical Fiber Communication
+  Conference} ,  Th2A.37, Optical Society of America (2014).
+
+\bibitem{hochberg:wafer}
+Yang, Y., Ma, Y., Guan, H., Liu, Y., Danziger, S., Ocheltree, S., Bergman, K.,
+  Baehr-Jones, T., and Hochberg, M., ``Phase coherence length in silicon
+  photonic platform,'' {\em Opt. Express}~{\bf 23},  16890--16902 (Jun 2015).
+
+\bibitem{MIT:uncertainty}
+Weng, T.-W., Zhang, Z., Su, Z., Marzouk, Y., Melloni, A., and Daniel, L.,
+  ``Uncertainty quantification of silicon photonic devices with correlated and
+  non-gaussian random parameters,'' {\em Opt. Express}~{\bf 23},  4242--4254
+  (Feb 2015).
+
+\bibitem{www_klayout}
+www.klayout.de.
+
+\end{thebibliography}
