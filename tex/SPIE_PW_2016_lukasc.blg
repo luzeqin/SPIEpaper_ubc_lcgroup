@@ -10,45 +10,45 @@ Warning--empty year in siepic-ebeam-pdk
 Warning--empty title in liao2015efficient
 Warning--empty volume in liao2015efficient
 Warning--empty volume in lukas14:OFC
-You've used 13 entries,
+You've used 15 entries,
             1993 wiz_defined-function locations,
-            580 strings with 6675 characters,
-and the built_in function-call counts, 4062 in all, are:
-= -- 363
-> -- 209
+            593 strings with 7120 characters,
+and the built_in function-call counts, 4920 in all, are:
+= -- 448
+> -- 249
 < -- 0
-+ -- 75
-- -- 62
-* -- 360
-:= -- 558
-add.period$ -- 13
-call.type$ -- 13
-change.case$ -- 12
++ -- 89
+- -- 74
+* -- 437
+:= -- 669
+add.period$ -- 15
+call.type$ -- 15
+change.case$ -- 14
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 183
-empty$ -- 343
-format.name$ -- 62
-if$ -- 958
+cite$ -- 22
+duplicate$ -- 219
+empty$ -- 409
+format.name$ -- 74
+if$ -- 1161
 int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 14
-newline$ -- 42
-num.names$ -- 13
-pop$ -- 32
+int.to.str$ -- 15
+missing$ -- 16
+newline$ -- 48
+num.names$ -- 15
+pop$ -- 34
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 156
+skip$ -- 194
 stack$ -- 0
-substring$ -- 282
-swap$ -- 108
+substring$ -- 370
+swap$ -- 134
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 7
-while$ -- 35
-width$ -- 15
-write$ -- 113
+while$ -- 43
+width$ -- 17
+write$ -- 131
 (There were 7 warnings)
