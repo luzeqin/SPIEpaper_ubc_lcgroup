@@ -103,14 +103,14 @@ frame=single,tabsize=2, captionpos=b,breaklines=true,showstringspaces=false,
 
 \begin{abstract}
 
-Electronic circuit designers commonly start their design process with a schematic, namely an abstract representation of the physical circuit.  In integrated photonics on the other hand, it is very common for the design to begin at the physical component level.  In order to build large integrated photonic systems, it is crucial to design using a schematic-driven approach.  This includes simulations based on schematics, schematic-driven layout, layout versus schematic verification, and post-layout simulations.   This paper  describes such a design framework implemented using Mentor Graphics and Lumerical Solutions design tools.  In addition, we describe challenges in silicon photonics related to manufacturing, and how these can taken into account in simulations and how these impact circuit performance.
+Electronic circuit designers commonly start their design process with a schematic, namely an abstract representation of the physical circuit.  In integrated photonics on the other hand, it is very common for the design to begin at the physical component level.  In order to build large integrated photonic systems, it is crucial to design using a schematic-driven approach.  This includes simulations based on schematics, schematic-driven layout, layout versus schematic verification, and post-layout simulations.   This paper  describes such a design framework implemented using Mentor Graphics and Lumerical Solutions design tools.  In addition, we describe challenges in silicon photonics related to manufacturing, and how these can be taken into account in simulations and how these impact circuit performance.
 
 
 %This paper describes design methodologies developed for silicon photonics integrated circuits.  The approach presented is inspired by methods employed in the Electronics Design Automation (EDA) community.  This is complemented by well established photonic component design tools, compact model synthesis, and optical circuit modelling.   A generic silicon photonics design kit, as described here, is available for download at \url{http://www.siepic.ubc.ca/GSiP}.
 
 \end{abstract}
 
-\keywords{silicon photonics design, photonic integrated circuits design, design methodologies, electronic design automation (EDA), manufacturing variability, corner analysis}
+\keywords{silicon photonics design, photonic integrated circuits design, electronic design automation (EDA), manufacturing variability, corner analysis, Monte Carlo simulation}
 
 
 \section{Introduction}\label{sec1}
@@ -140,18 +140,20 @@ In particular, this paper emphasizes the importance of post-layout simulations. 
 
 \section{Schematic-Driven Design}
 
-First, we review the schematic-driven design approach described in Refs.~\citen{chrostowski2014design, chrostowski2015silicon}.   This design flow is aimed at highly-complex silicon photonic circuits, analogous to how they are designed in the electronics industry.  Here, the design flow starts with an abstract representation, i.e., a circuit schematic.  We begin with symbols for the components,  place them on a schematic, and connect them.   This allows us to immediately simulate the circuit by providing the desired stimulus.  Behind the scenes, there are component models.  The designer does not need to develop them, since they are provided in the design kit.  Advanced PDKs will include active optical components, and electronics.  
+First, we review the schematic-driven design approach described in References \citen{chrostowski2014design} and \citen{chrostowski2015silicon}.   This design flow is aimed at highly-complex silicon photonic circuits, analogous to how they are designed in the electronics industry.  Here, the design flow starts with an abstract representation, i.e., a circuit schematic.  We begin with symbols for the components,  place them on a schematic, and connect them.   This allows us to immediately simulate the circuit by providing the desired stimulus.  Behind the scenes, there are component models.  The designer does not need to develop them, since they are provided in the design kit.  Advanced PDKs will include active optical components, and electronics.  
 
 In this flow, the layout is created on the basis of the schematic.  The software aids the designer in creating the layout by reading the schematic as the layout is generated; specifically component placement can be inferred from the schematic, and the connectivity between components is maintained to aid in the routing.
 
 The verification step involves two parts: 1) manufacturing verification (minimum features size, etc), known as Design Rule Check (DRC), and 2) functional verification, known as Layout Versus Schematic  (LVS).  The latter is critical for large circuits.  Since we have a schematic and a layout, we have the opportunity to compare them.  The LVS tool uses a set of rules to recognize the components and their connectivity in the layout, known as netlist extraction, and then compares the components and connectivity with the original schematic.  This verification step can identify incorrect connectivity, such as disconnected wires and waveguides, and component errors such as incorrect components or incorrect parameters.
 
-Once the layout of the circuit is deemed to be correct, the LVS tool can extract the parameters from the layout and update the schematic.  For photonics, the lengths of your waveguides, as drawn, is often critical in determining the performance.  For example, the lengths of the waveguides in an interferometer need to be calculated so that we can obtain an accurate estimation and simulation of the free spectral range (FSR). After the schematic is updated, the designer can re-simulate the circuit to verify that it operates as expected once the details (such as waveguide length in photonics, or parasitics in electronics) are included.
+Once the layout of the circuit is deemed to be correct, the LVS tool can extract the parameters from the layout and update the schematic.  For photonics, the lengths of your waveguides, as drawn, is often critical in determining performance.  For example, the lengths of the waveguides in an interferometer need to be calculated so that we can obtain an accurate estimation and simulation of the free spectral range (FSR). After the schematic is updated, the designer can re-simulate the circuit to verify that it operates as expected once the details (such as waveguide length in photonics, or parasitics in electronics) are included.
 
 
 In contrast to the traditional photonics design approach, this design flow has a much more well established design kit, and enables rapid design of complex circuits, without having to spend time on modelling individual components.  This type of design has been critical to the success of the electronics industry where circuits have thousands to billions of components.
 
-An evolution that is expected for integrated photonics design is that we are moving towards a methodology similar to CMOS design leading to a distinct skill sets.  For example, circuit designers will need to know the minimum of information about how a directional coupler works, but will not need to design them (the main knowledge required is that its function is similar to a beam splitter).  However, the circuit designer will be highly attuned to the performance criteria of the splitter (e.g., wavelength dependance of the splitting ratio, insertion loss, power splitting balance, sensitivity to manufacturing variations) and how these impact the circuit performance (e.g., extinction ratio, crosstalk).  This enables the circuit designer to focus on design at a higher level, including system implementation.
+As the field of integrated photonics progresses, we expect that the industry will further evolve towards how CMOS electronics design is done.  In particular, this will lead to a partitioning of design tasks, with each task requiring a distinct skill set.
+%An evolution that is expected for integrated photonics design is that we are moving towards a methodology similar to CMOS design leading to a distinct skill sets.  
+For example, circuit designers will need to know the minimum of information about how a directional coupler works, but will not need to design them (the main knowledge required is that its function is similar to a beam splitter).  However, the circuit designer will be highly attuned to the performance criteria of the splitter (e.g., wavelength dependance of the splitting ratio, insertion loss, power splitting balance, sensitivity to manufacturing variations) and how these impact the circuit performance (e.g., extinction ratio, crosstalk).  This enables the circuit designer to focus on design at a higher level, including system implementation.
 
 
 \subsection{Post-Layout Simulation}
@@ -356,23 +358,36 @@ The circuit with components updated based on their positions is simulated.  This
 
 The scatter plot in Figure~\ref{error} shows the simulated phase error of a balanced Mach-Zehnder Interferometer versus the waveguide spacing between two arms, in a 248 nm silicon photonics process. In the Monte Carlo simulations, the horizontal length of the phase arms, $L$,  is 200 $\mu m$. The phase error is defined as the absolute optical phase difference between the two phase arms. Ideally, the phase error should be 0 when there are no fabrication variations. However, this figure clearly shows that the mean of the phase error for an ensemble of MZIs is approximately linearly proportional to the waveguide spacing, emphasizing the importance of very compact layout designs, particularly where phase matching is required.  This simulation is similar to the proportionality  observed experimentally in ring resonators \cite{lukas14:OFC}.  The simulated phase error can be used to estimate the trimming power required for MZI-based photonic switches. 
 
-Another example of the Monte Carlo method is its application to a Dual Phase Shifted Waveguide Bragg Grating (DPS-WBG) \cite{burla2013integrated, bedard2016dual}.  This device has applications for microwave photonics (true time delay, TTD, for broadband microwave signals) \cite{burla2013integrated} and high-speed data communication (Bragg grating modulator) \cite{bedard2016dual}.  This device is a coupled cavity, similar to coupled ring resonators.  In the ideal case, the resonance frequency of the two cavities is perfectly matched.  However, differential manufacturing errors lead to the gratings being slightly different, which results in the splitting of the two modes.  The central peak in the transmission of the device is highly sensitive to this variation; namely the peak's insertion loss varies.  What is more remarkable is the reflection spectrum. In the ideal case, there is a dip at the resonance frequency.  With a slight mismatch between the components, the peak can completely vanish; this device now operates as an all-pass filter with a phase shift.  The transmission and reflection spectrum can also be tuned by heating each section.  What is important to note for this sub-circuit / compound device is that manufacturing variability needs to be taken into account during the design stage, in order to have a correct understanding of the its performance.
+Another example application of the Monte Carlo method is for the Dual Phase Shifted Waveguide Bragg Grating (DPS-WBG) \cite{burla2013integrated, bedard2016dual}.  This device has applications for microwave photonics (true time delay, TTD, for broadband microwave signals) \cite{burla2013integrated} and high-speed data communication (Bragg grating modulator) \cite{bedard2016dual}.  It consists of  coupled cavity, similar to coupled ring resonators, except that it is implemented using three Bragg gratings with a quarter-wavelength phase shift section separating each grating, as shown in Figure~\ref{DPSWBG_gds}.  In the ideal case, the resonance frequency of the two cavities is perfectly matched.  However, differential manufacturing errors lead to the gratings being slightly different, which results in the splitting of the two modes.  The central peak in the transmission of the device is highly sensitive to this variation; namely the peak's insertion loss varies.  What is more remarkable is the reflection spectrum. In the ideal case, there is a dip at the resonance frequency.  With a slight mismatch between the components, the peak can completely vanish; this device now operates as an all-pass filter with a phase shift.  The transmission and reflection spectrum can also be tuned by heating each section.  What is important to note for this sub-circuit / compound device is that manufacturing variability needs to be taken into account during the design stage, in order to have a correct understanding of the its performance.
+
+
+\begin{figure}[tbp]
+\begin{center}   
+\subfloat[Layout of a Dual Phase Shifted Waveguide Bragg Grating (DPS-WBG).]{\label{DPSWBG_gds} \includegraphics[width=\linewidth]{../figs_paper/DPSWBG_gds} } \\
+\subfloat[Circuit simulation of the nominal design] {\label{DPSWBG1}
+\includegraphics[width=0.4\linewidth]{../figs_paper/DPSWBG1} }
+\subfloat[Monte Carlo circuit simulation including spatial correlations (one simulation).] {\label{DPSWBG2}
+\includegraphics[width=0.4\linewidth]{../figs_paper/DPSWBG2} }
+\caption{Layout and simulations of a Dual Phase Shifted Waveguide Bragg Grating (DPS-WBG) \cite{burla2013integrated}.}
+\label{Bragg}
+\end{center}
+\end{figure}
 
 
 
 \section{Conclusion}\label{sec6}
 
-%The opportunity for silicon photonics is to leverage three decades of CMOS Electronic Design Automation (EDA) tool development, and two decades of optical design software development.
+In this paper, we described a design methodology that takes advantage of CMOS Electronic Design Automation (EDA) tools coupled to optical design software.  Whether the design is implemented using a schematic-first or a layout-first approach, incorporating manufacturing yield and process variations into the design flow is a critical step in the functional verification of the circuit.  Simulating process variations is performed by synchronizing the schematic with the as-drawn layout using a netlist extraction approach, and using Monte Carlo analysis that uses parameterized optical components.
+The  objective of the design flow is ``first-time-right'' design, where circuits function correctly the first time they are fabricated; this can be achieved only if the designer takes manufacturing challenges into consideration and applies effective mitigation strategies in order to build circuits that are immune to these variations.
+
 %Full-flow design environments are becoming a reality for silicon photonics.
 %
 %The mature CMOS fabrication processes and multi-project wafer (MPW) fabrication runs 
 %%Stable processes that are repeatable
-%enable the development of component libraries for system design.  Emphasis needs to be placed on developing parameterized components to bring increased utility for system-level design, and incorporating manufacturing yield and process variations into the design flow.  
+%enable the development of component libraries for system design.  
 %
 %Similar to the electronics industry, photonic integrated circuit design and fabrication is evolving towards specialized roles, namely: a) fabrication and processing, b) EDA tools; c) component, library, and PDKs; and, d) system design.  This separation of roles will lead to accelerated product development and ultimately aiding the silicon photonics industry achieve its objectives. 
 
-
-The  objective of this work is ``first-time-right'' design, where circuits function correctly the first time they are fabricated; this can be achieved only if the designer takes manufacturing challenges into consideration and applies effective mitigation strategies in order to build circuits that are immune to these variations.
 
 
 
