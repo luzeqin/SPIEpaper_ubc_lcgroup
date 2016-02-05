@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  5 FEB 2016 00:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  5 FEB 2016 00:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -709,6 +709,22 @@ Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
 \@datafile=\read2
 )
 overpic: relative positioning in percent
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
 
 LaTeX Warning: Unused global option(s):
@@ -724,21 +740,21 @@ LaTeX Warning: Label `Bragg' multiply defined.
 )
 \openout1 = `SPIE_PW_2016_lukasc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 32.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -749,7 +765,7 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count190
 \AtBeginShipoutBox=\box79
-Package hyperref Info: Link coloring OFF on input line 29.
+Package hyperref Info: Link coloring OFF on input line 32.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -759,9 +775,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count191
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
 
 (./SPIE_PW_2016_lukasc.out) (./SPIE_PW_2016_lukasc.out)
 \@outlinefile=\write3
@@ -808,36 +824,21 @@ File: siunitx-abbreviations.cfg 2015/01/21 v2.6e siunitx: Abbreviated units
 
 ptm-font_in_spiecls
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
-)
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 107.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 113.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 116.
 
 <../figs_paper/Process_Design.pdf, id=61, 1319.2359pt x 453.35547pt>
 File: ../figs_paper/Process_Design.pdf Graphic file (type pdf)
 
 <use ../figs_paper/Process_Design.pdf>
 Package pdftex.def Info: ../figs_paper/Process_Design.pdf used on input line 12
-2.
+5.
 (pdftex.def)             Requested size: 243.91124pt x 83.8141pt.
  [1
 
@@ -847,18 +848,18 @@ _paper/Process_Design.pdf>] [2]
 File: ../figs_paper/SDDvsLDD.pdf Graphic file (type pdf)
 
 <use ../figs_paper/SDDvsLDD.pdf>
-Package pdftex.def Info: ../figs_paper/SDDvsLDD.pdf used on input line 188.
+Package pdftex.def Info: ../figs_paper/SDDvsLDD.pdf used on input line 191.
 (pdftex.def)             Requested size: 439.03726pt x 236.07338pt.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 202.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 205.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 202.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 205.
 
-Overfull \hbox (6.55307pt too wide) in paragraph at lines 203--204
+Overfull \hbox (6.55307pt too wide) in paragraph at lines 206--207
 []\OT1/ptm/m/n/10 The li-brary which con-tains the com-po-nent's com-pact model
  to be used for sim-u-la-tions (e.g., ``De-sign kit-s/e-beam[]v1.2'') 
  []
@@ -868,171 +869,182 @@ Overfull \hbox (6.55307pt too wide) in paragraph at lines 203--204
 File: ../figs_paper/MZI_circuit2.png Graphic file (type png)
 
 <use ../figs_paper/MZI_circuit2.png>
-Package pdftex.def Info: ../figs_paper/MZI_circuit2.png used on input line 226.
+Package pdftex.def Info: ../figs_paper/MZI_circuit2.png used on input line 229.
 
 (pdftex.def)             Requested size: 243.91124pt x 255.0021pt.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 231.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 234.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-(./MZI_circuit2.spi [5 <../figs_paper/MZI_circuit2.png>]) (./MZI_circuit3.spi
-[6]) <../figs_paper/Bragg1.png, id=297, 1710.39pt x 367.3725pt>
+(./MZI_circuit2.spi [5 <../figs_paper/MZI_circuit2.png>]) (./MZI_circuit3.spi)
+<../figs_paper/Bragg1.png, id=249, 1710.39pt x 367.3725pt>
 File: ../figs_paper/Bragg1.png Graphic file (type png)
 
 <use ../figs_paper/Bragg1.png>
-Package pdftex.def Info: ../figs_paper/Bragg1.png used on input line 246.
+Package pdftex.def Info: ../figs_paper/Bragg1.png used on input line 249.
 (pdftex.def)             Requested size: 390.25948pt x 83.82121pt.
 
-<../figs_paper/Bragg2.png, id=298, 1713.40125pt x 213.79875pt>
+<../figs_paper/Bragg2.png, id=250, 1713.40125pt x 213.79875pt>
 File: ../figs_paper/Bragg2.png Graphic file (type png)
 
 <use ../figs_paper/Bragg2.png>
-Package pdftex.def Info: ../figs_paper/Bragg2.png used on input line 248.
+Package pdftex.def Info: ../figs_paper/Bragg2.png used on input line 251.
 (pdftex.def)             Requested size: 390.25948pt x 48.69637pt.
 
-<../figs_paper/Bragg.png, id=299, 1415.2875pt x 537.00626pt>
+<../figs_paper/Bragg.png, id=251, 1415.2875pt x 537.00626pt>
 File: ../figs_paper/Bragg.png Graphic file (type png)
 
 <use ../figs_paper/Bragg.png>
-Package pdftex.def Info: ../figs_paper/Bragg.png used on input line 250.
+Package pdftex.def Info: ../figs_paper/Bragg.png used on input line 253.
 (pdftex.def)             Requested size: 390.25948pt x 148.07458pt.
 
-<../figs_paper/MZI_circuit2_MC.png, id=300, 915.92188pt x 483.8075pt>
+<../figs_paper/MZI_circuit2_MC.png, id=252, 915.92188pt x 483.8075pt>
 File: ../figs_paper/MZI_circuit2_MC.png Graphic file (type png)
 
 <use ../figs_paper/MZI_circuit2_MC.png>
 Package pdftex.def Info: ../figs_paper/MZI_circuit2_MC.png used on input line 2
-62.
+65.
 (pdftex.def)             Requested size: 390.25948pt x 206.1433pt.
- [7] [8 <../figs_paper/Bragg1.png> <../figs_paper/Bragg2.png> <../figs_paper/Br
+ [6] [7 <../figs_paper/Bragg1.png> <../figs_paper/Bragg2.png> <../figs_paper/Br
 agg.png> <../figs_paper/MZI_circuit2_MC.png>] <../figs_chris/S_Interpolation1.p
-df, id=332, 328.22626pt x 323.2075pt>
+df, id=327, 328.22626pt x 323.2075pt>
 File: ../figs_chris/S_Interpolation1.pdf Graphic file (type pdf)
 
 <use ../figs_chris/S_Interpolation1.pdf>
 Package pdftex.def Info: ../figs_chris/S_Interpolation1.pdf used on input line 
-292.
+295.
 (pdftex.def)             Requested size: 170.74084pt x 168.13298pt.
 
-<../figs_chris/S_Interpolation2.pdf, id=333, 418.56375pt x 294.09875pt>
+<../figs_chris/S_Interpolation2.pdf, id=328, 418.56375pt x 294.09875pt>
 File: ../figs_chris/S_Interpolation2.pdf Graphic file (type pdf)
 
 <use ../figs_chris/S_Interpolation2.pdf>
 Package pdftex.def Info: ../figs_chris/S_Interpolation2.pdf used on input line 
-294.
+297.
 (pdftex.def)             Requested size: 243.91124pt x 171.38066pt.
 
-<../figs_chris/MZI_simple_MC1.pdf, id=334, 324.21124pt x 123.46124pt>
+<../figs_chris/MZI_simple_MC1.pdf, id=329, 324.21124pt x 123.46124pt>
 File: ../figs_chris/MZI_simple_MC1.pdf Graphic file (type pdf)
 
 <use ../figs_chris/MZI_simple_MC1.pdf>
 Package pdftex.def Info: ../figs_chris/MZI_simple_MC1.pdf used on input line 30
-2.
+5.
 (pdftex.def)             Requested size: 243.91124pt x 92.88391pt.
 
-<../figs_chris/MZI_simple_MC2.pdf, id=335, 306.14375pt x 223.83624pt>
+<../figs_chris/MZI_simple_MC2.pdf, id=330, 306.14375pt x 223.83624pt>
 File: ../figs_chris/MZI_simple_MC2.pdf Graphic file (type pdf)
 
 <use ../figs_chris/MZI_simple_MC2.pdf>
 Package pdftex.def Info: ../figs_chris/MZI_simple_MC2.pdf used on input line 30
-4.
+7.
 (pdftex.def)             Requested size: 243.91124pt x 178.3349pt.
 
-Overfull \hbox (9.99998pt too wide) in paragraph at lines 302--305
+Overfull \hbox (9.99998pt too wide) in paragraph at lines 305--308
  [][][][] 
  []
 
-[9 <../figs_chris/S_Interpolation1.pdf> <../figs_chris/S_Interpolation2.pdf> <.
-./figs_chris/MZI_simple_MC1.pdf> <../figs_chris/MZI_simple_MC2.pdf>] [10]
-<../figs_chris/flow_chart.pdf, id=507, 359.3425pt x 554.07pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8] [9 <../figs_chris/S_Interpolation1.pdf> <../figs_chris/S_Interpolation2.pdf
+> <../figs_chris/MZI_simple_MC1.pdf> <../figs_chris/MZI_simple_MC2.pdf>]
+<../figs_chris/flow_chart.pdf, id=498, 359.3425pt x 554.07pt>
 File: ../figs_chris/flow_chart.pdf Graphic file (type pdf)
 
 <use ../figs_chris/flow_chart.pdf>
-Package pdftex.def Info: ../figs_chris/flow_chart.pdf used on input line 341.
+Package pdftex.def Info: ../figs_chris/flow_chart.pdf used on input line 344.
 (pdftex.def)             Requested size: 170.74084pt x 263.27052pt.
 
-<../figs_chris/wafer_maps.pdf, id=508, 418.56375pt x 552.0625pt>
+<../figs_chris/wafer_maps.pdf, id=499, 418.56375pt x 552.0625pt>
 File: ../figs_chris/wafer_maps.pdf Graphic file (type pdf)
 
 <use ../figs_chris/wafer_maps.pdf>
-Package pdftex.def Info: ../figs_chris/wafer_maps.pdf used on input line 343.
+Package pdftex.def Info: ../figs_chris/wafer_maps.pdf used on input line 346.
 (pdftex.def)             Requested size: 195.126pt x 257.35503pt.
- [11 <../figs_chris/flow_chart.pdf> <../figs_chris/wafer_maps.pdf>]
-<../figs_chris/MZI_spatial_MC1.pdf, id=599, 368.37625pt x 256.96pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10] <../figs_chris/MZI_spatial_MC1.pdf, id=523, 368.37625pt x 256.96pt>
 File: ../figs_chris/MZI_spatial_MC1.pdf Graphic file (type pdf)
 
 <use ../figs_chris/MZI_spatial_MC1.pdf>
 Package pdftex.def Info: ../figs_chris/MZI_spatial_MC1.pdf used on input line 3
-63.
+66.
 (pdftex.def)             Requested size: 243.91124pt x 170.13911pt.
 
-<../figs_chris/MZI_spatial_MC2.pdf, id=600, 419.5675pt x 291.0875pt>
+<../figs_chris/MZI_spatial_MC2.pdf, id=524, 419.5675pt x 291.0875pt>
 File: ../figs_chris/MZI_spatial_MC2.pdf Graphic file (type pdf)
 
 <use ../figs_chris/MZI_spatial_MC2.pdf>
 Package pdftex.def Info: ../figs_chris/MZI_spatial_MC2.pdf used on input line 3
-65.
+68.
 (pdftex.def)             Requested size: 243.91124pt x 169.22173pt.
 
-Overfull \hbox (9.99998pt too wide) in paragraph at lines 363--366
+Overfull \hbox (9.99998pt too wide) in paragraph at lines 366--369
  [][][][] 
  []
 
-<../figs_paper/DPSWBG_gds.png, id=609, 2072.74374pt x 80.3pt>
+[11 <../figs_chris/flow_chart.pdf> <../figs_chris/wafer_maps.pdf> <../figs_chri
+s/MZI_spatial_MC1.pdf> <../figs_chris/MZI_spatial_MC2.pdf>]
+<../figs_paper/DPSWBG_gds.png, id=660, 2072.74374pt x 80.3pt>
 File: ../figs_paper/DPSWBG_gds.png Graphic file (type png)
 
 <use ../figs_paper/DPSWBG_gds.png>
-Package pdftex.def Info: ../figs_paper/DPSWBG_gds.png used on input line 388.
+Package pdftex.def Info: ../figs_paper/DPSWBG_gds.png used on input line 391.
 (pdftex.def)             Requested size: 487.8225pt x 18.89867pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 388--388
+Overfull \hbox (5.0pt too wide) in paragraph at lines 391--391
  [] 
  []
 
-<../figs_paper/DPSWBG1.png, id=610, 1198.4775pt x 747.79375pt>
+<../figs_paper/DPSWBG1.png, id=661, 1198.4775pt x 747.79375pt>
 File: ../figs_paper/DPSWBG1.png Graphic file (type png)
 
 <use ../figs_paper/DPSWBG1.png>
-Package pdftex.def Info: ../figs_paper/DPSWBG1.png used on input line 390.
+Package pdftex.def Info: ../figs_paper/DPSWBG1.png used on input line 393.
 (pdftex.def)             Requested size: 195.126pt x 121.74895pt.
 
-<../figs_paper/DPSWBG2.png, id=611, 1200.485pt x 747.79375pt>
+<../figs_paper/DPSWBG2.png, id=662, 1200.485pt x 747.79375pt>
 File: ../figs_paper/DPSWBG2.png Graphic file (type png)
 
 <use ../figs_paper/DPSWBG2.png>
-Package pdftex.def Info: ../figs_paper/DPSWBG2.png used on input line 392.
+Package pdftex.def Info: ../figs_paper/DPSWBG2.png used on input line 395.
 (pdftex.def)             Requested size: 195.126pt x 121.54356pt.
- [12 <../figs_chris/MZI_spatial_MC1.pdf> <../figs_chris/MZI_spatial_MC2.pdf>] (
-./SPIE_PW_2016_lukasc.bbl
+ (./SPIE_PW_2016_lukasc.bbl [12 <../figs_paper/DPSWBG_gds.png> <../figs_paper/D
+PSWBG1.png> <../figs_paper/DPSWBG2.png>]
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10> not available
 (Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 20.
- [13 <../figs_paper/DPSWBG_gds.png> <../figs_paper/DPSWBG1.png> <../figs_paper/
-DPSWBG2.png>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 423.
- [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 423.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 426.
 
-(./SPIE_PW_2016_lukasc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 423.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 423.
+[13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 426.
+ (./SPIE_PW_2016_lukasc.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 426.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 426.
 Package rerunfilecheck Info: File `SPIE_PW_2016_lukasc.out' has not changed.
 (rerunfilecheck)             Checksum: 75A5670060F35BF8AE99AFBE4765771E;954.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 423.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 426.
  ) 
 Here is how much of TeX's memory you used:
- 18190 strings out of 493089
- 345441 string characters out of 6134842
- 540898 words of memory out of 5000000
- 21357 multiletter control sequences out of 15000+600000
+ 18499 strings out of 493089
+ 348175 string characters out of 6134842
+ 541807 words of memory out of 5000000
+ 21669 multiletter control sequences out of 15000+600000
  24648 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,9n,49p,10386b,2283s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,10n,47p,10386b,2287s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
@@ -1043,10 +1055,10 @@ xmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on SPIE_PW_2016_lukasc.pdf (14 pages, 4259429 bytes).
+Output written on SPIE_PW_2016_lukasc.pdf (13 pages, 4259207 bytes).
 PDF statistics:
- 754 PDF objects out of 1000 (max. 8388607)
- 581 compressed objects within 6 object streams
- 132 named destinations out of 1000 (max. 500000)
+ 750 PDF objects out of 1000 (max. 8388607)
+ 578 compressed objects within 6 object streams
+ 131 named destinations out of 1000 (max. 500000)
  203 words of extra memory for PDF output out of 10000 (max. 10000000)
 
