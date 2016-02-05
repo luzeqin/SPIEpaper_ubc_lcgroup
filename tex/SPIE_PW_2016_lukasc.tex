@@ -128,8 +128,7 @@ In electronic circuit design, the complexity and scale of designs necessitated m
 
 In integrated photonics design on the other hand, it is often one person who is responsible for all stages of the design.  Furthermore, the design process is usually ``bottom-up'', where the design begins with the physical components, and gradually builds up into a system.   In order to build large integrated photonic systems, it is crucial to 1) have a design methodology that allows for teams of designers with various roles to collaborate, and 2) have a capability that includes abstract representations (e.g., schematics) with a link to the physical implementation (layout).  
 
-The proposed methodology is based on the electronic IC ecosystem.  This includes simulations based on schematics, schematic-driven layout, layout versus schematic verification, and post-layout simulations.   We have implemented a design framework using Mentor Graphics and Lumerical Solutions design tools that implements the above requirements, as described Refs.~\citen{chrostowski2014design, chrostowski2015silicon}.  
-
+The proposed methodology is based on the electronic IC ecosystem.  This includes simulations based on schematics, schematic-driven layout, layout versus schematic verification, and post-layout simulations.   We have implemented a design framework using Mentor Graphics and Lumerical Solutions design tools that implements the above requirements, as described References \citen{chrostowski2014design} and \citen{chrostowski2015silicon}.
 This paper expands upon the design methodology described previously by adding:
 \begin{enumerate} 
 \item Post-layout simulations
@@ -158,7 +157,7 @@ For example, circuit designers will need to know the minimum of information abou
 
 \subsection{Post-Layout Simulation}
 
-Post-layout simulation refers to circuit simulations that are performed after the layout is created.  In the schematic-driven design flow, this involves extracting parameters from the layout, and updating the schematic.  However, there is another use case for post-layout simulations.  Namely, we desire the capability to simulate directly from a layout without requiring a schematic (e.g., created by a different designer,  created using different software, and in general if the schematic is not available).
+Post-layout simulation refers to circuit simulations that are performed after the layout is created.  In the schematic-driven design flow, this involves extracting parameters from the layout, and updating the schematic.  However, there is another use case for post-layout simulations.  Namely, we desire the capability to simulate directly from a layout without requiring a schematic (e.g., for layouts created by a different designer,  layouts created using different software, and in general if the schematic is not available).
 
 In this case, the LVS tool can be used to create a netlist representation of the circuit.  This is in fact easier to perform than the layout versus schematic operation described above, as it only requires the netlist extraction step.  The requirement for this functionality is that each component is supported by the library / PDK.  This is necessary so that the LVS tool can recognize the devices correctly, and label them with the appropriate component model.  Typically, the components have added marking layers that identify the components, perhaps their names, where the input / output ports are, and provide port names.
 
