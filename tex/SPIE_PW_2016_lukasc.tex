@@ -273,22 +273,42 @@ Thus, taking manufacturing variability into account in order to predict yield is
 In order to perform Monte Carlo simulations, we require parameterized component models that are continuous with the variables of interest (e.g., thickness, width).  Although one approach is to simulate each component on a fine mesh (e.g., 0.1 nm steps in each deviation variable), this may be computationally prohibitive.  We developed more efficient approaches, as follows.
 
 \subsubsection{S-Parameter component models}
-For components that are described by S-parameters, we begin by generating S-parameters for the corner cases (e.g., components with waveguide geometries of 225 x 505 nm, 215 x 505 nm, 225 x 495 nm, 215 x 495 nm).  For each Monte Carlo iteration, we interpolate the S-parameters for the desired thickness and width variation.
+A multidimensional spline interpolation method allows for estimation of the amplitude and phase for each S-parameter taking into account its dependency on multiple parameters, such as frequency, thickness and width. S-parameters passivity and reciprocity can also be tested and enforced, to avoid violating energy conservation laws.
 
-This can be applied to components such as directional couplers, where the phase through the device is dependant on the thickness and width of the waveguide.  Two directional couplers can be connected to create a ring resonator sub-circuit, and the performance of the ring resonator (resonance frequency, free spectral range, extinction ratio) will vary with the thickness and width variability introduced into the directional coupler model.
+For components that are described by S-parameters, we begin by generating S-parameters for the corner cases (e.g., components with variations ($\Delta$w (nm), $\Delta$h (nm)) of (+20, +10), (+20, -10), (-20, +10) and (-20, -10)), as shown in Fig.~\ref{s-interpolation}(a).  For each Monte Carlo iteration, we interpolate the S-parameters for the desired thickness and width variation. The model can include multiple modes (e.g., TE and TM polarization).
 
-The model can include multiple modes (e.g., TE and TM polarization).
+This can be applied to components such as directional couplers, where the phase through the device is dependant on the thickness and width of the waveguide.  Two directional couplers can be connected to create a ring resonator sub-circuit, and the performance of the ring resonator (resonance frequency, free spectral range, extinction ratio) will vary with the thickness and width variability introduced into the directional coupler model. As an example, Fig.~\ref{s-interpolation}(b) shows the S-parameters for both the corner and interpolated cases of a 2$\times$2 power splitter.
 
-*****  add something intelligent here: challenges in interpolation? *****  
+
+
+
+
+
+\begin{figure}[tbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../figs_paper/S_Interpolation.pdf}
+    \caption[]{(a) Process corners for two process parameters: waveguide height and width; (b) S-parameter interpolation for a 2$\times$2 power splitter.}
+    \label{s-interpolation}
+\end{figure}
+
+\begin{figure}[tbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../figs_paper/MZI_common_MC.pdf}
+    \caption[]{(a) Layout of balanced Mach-Zehnder Interferometer test structure; (b) Monte Carlo simulation results for the output transmissions.}
+    \label{MZI_commmon_MC}
+\end{figure}
 
 \subsubsection{Waveguides}
 2D case. easiest is to simply parameterize the effective index as a function of the thickness and width.
 
 *****  add something intelligent here *****
+The waveguide transfer function is described by propagation properties such as loss, effective index, group index and dispersion, and are parameterized as a function of frequency, thickness and width. 
 
 \subsubsection{Perturbation approach}
 For the case of the Bragg grating, for example, we can assume that the manufacturing only affects the central Bragg wavelength.  If all other parameters remain the same (grating coupling coefficient) than a small perturbation to the nominal effective index can be applied.  This can be expressed as two independent linear parameters, $ \frac{\partial n_\text{eff}}{\partial w}$, and $ \frac{\partial n_\text{eff}}{\partial h}$, which are added to the nominal value.
 
+\subsection{Uniform Monte Carlo}
+***please add text for Figure~\ref{MZI_commmon_MC}*** 
 
 \subsection{Enhanced Monte Carlo}
 
