@@ -71,4 +71,15 @@ Weng, T.-W., Zhang, Z., Su, Z., Marzouk, Y., Melloni, A., and Daniel, L.,
   non-gaussian random parameters,'' {\em Opt. Express}~{\bf 23},  4242--4254
   (Feb 2015).
 
+\bibitem{burla2013integrated}
+Burla, M., Cort\'{e}s, L.~R., Li, M., Wang, X., Chrostowski, L., and Aza\~{n}a,
+  J., ``Integrated waveguide bragg gratings for microwave photonics signal
+  processing,'' {\em Opt. Express}~{\bf 21},  25120--25147 (Oct 2013).
+
+\bibitem{bedard2016dual}
+B{\'e}dard, K., Simard, A., Filion, B., Painchaud, Y., Rusch, L., and
+  LaRochelle, S., ``Dual phase-shift bragg grating silicon photonic modulator
+  operating up to 60 gb/s,'' {\em Optics Express}~{\bf 24}(3),  2413--2419
+  (2016).
+
 \end{thebibliography}

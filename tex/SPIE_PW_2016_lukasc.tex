@@ -103,14 +103,14 @@ frame=single,tabsize=2, captionpos=b,breaklines=true,showstringspaces=false,
 
 \begin{abstract}
 
-Electronic circuit designers commonly start their design process with a schematic, namely an abstract representation of the physical circuit.  In integrated photonics on the other hand, it is very common for the design to begin at the physical component level.  In order to build large integrated photonic systems, it is crucial to design using a schematic-driven approach.  This includes simulations based on schematics, schematic-driven layout, layout versus schematic verification, and post-layout simulations.   This paper  describes such a design framework implemented using Mentor Graphics and Lumerical Solutions design tools.  In addition, we describe challenges in silicon photonics related to manufacturing, and how these can taken into account in simulations and how these impact circuit performance.
+Electronic circuit designers commonly start their design process with a schematic, namely an abstract representation of the physical circuit.  In integrated photonics on the other hand, it is very common for the design to begin at the physical component level.  In order to build large integrated photonic systems, it is crucial to design using a schematic-driven approach.  This includes simulations based on schematics, schematic-driven layout, layout versus schematic verification, and post-layout simulations.   This paper  describes such a design framework implemented using Mentor Graphics and Lumerical Solutions design tools.  In addition, we describe challenges in silicon photonics related to manufacturing, and how these can be taken into account in simulations and how these impact circuit performance.
 
 
 %This paper describes design methodologies developed for silicon photonics integrated circuits.  The approach presented is inspired by methods employed in the Electronics Design Automation (EDA) community.  This is complemented by well established photonic component design tools, compact model synthesis, and optical circuit modelling.   A generic silicon photonics design kit, as described here, is available for download at \url{http://www.siepic.ubc.ca/GSiP}.
 
 \end{abstract}
 
-\keywords{silicon photonics design, photonic integrated circuits design, design methodologies, electronic design automation (EDA), manufacturing variability, corner analysis}
+\keywords{silicon photonics design, photonic integrated circuits design, electronic design automation (EDA), manufacturing variability, corner analysis, Monte Carlo simulation}
 
 
 \section{Introduction}\label{sec1}
@@ -128,8 +128,7 @@ In electronic circuit design, the complexity and scale of designs necessitated m
 
 In integrated photonics design on the other hand, it is often one person who is responsible for all stages of the design.  Furthermore, the design process is usually ``bottom-up'', where the design begins with the physical components, and gradually builds up into a system.   In order to build large integrated photonic systems, it is crucial to 1) have a design methodology that allows for teams of designers with various roles to collaborate, and 2) have a capability that includes abstract representations (e.g., schematics) with a link to the physical implementation (layout).  
 
-The proposed methodology is based on the electronic IC ecosystem.  This includes simulations based on schematics, schematic-driven layout, layout versus schematic verification, and post-layout simulations.   We have implemented a design framework using Mentor Graphics and Lumerical Solutions design tools that implements the above requirements, as described Refs.~\citen{chrostowski2014design, chrostowski2015silicon}.  
-
+The proposed methodology is based on the electronic IC ecosystem.  This includes simulations based on schematics, schematic-driven layout, layout versus schematic verification, and post-layout simulations.   We have implemented a design framework using Mentor Graphics and Lumerical Solutions design tools that implements the above requirements, as described References \citen{chrostowski2014design} and \citen{chrostowski2015silicon}.
 This paper expands upon the design methodology described previously by adding:
 \begin{enumerate} 
 \item Post-layout simulations
@@ -140,23 +139,33 @@ In particular, this paper emphasizes the importance of post-layout simulations. 
 
 \section{Schematic-Driven Design}
 
-First, we review the schematic-driven design approach described in Refs.~\citen{chrostowski2014design, chrostowski2015silicon}.   This design flow is aimed at highly-complex silicon photonic circuits, analogous to how they are designed in the electronics industry.  Here, the design flow starts with an abstract representation, i.e., a circuit schematic.  We begin with symbols for the components,  place them on a schematic, and connect them.   This allows us immediately to simulate the circuit by providing the desired stimulus.  Behind the scenes, there are component models.  The designer does not need to develop them, since they are provided in the design kit.  Advanced PDKs will include active optical components, and electronics.  
+<<<<<<< HEAD
+First, we review the schematic-driven design approach described in Refs.~\citen{chrostowski2014design, chrostowski2015silicon}.   This design flow is aimed at highly-complex silicon photonic circuits, analogous to how they are designed in the electronics industry.  Here, the design flow starts with an abstract representation, i.e., a circuit schematic.  We begin with symbols for the components,  place them on a schematic, and connect them.   This allows us to immediately simulate the circuit by providing the desired stimulus.  Behind the scenes, there are component models.  The designer does not need to develop them, since they are provided in the design kit.  Advanced PDKs will include active optical components, and electronics.  
+=======
+First, we review the schematic-driven design approach described in References \citen{chrostowski2014design} and \citen{chrostowski2015silicon}.   This design flow is aimed at highly-complex silicon photonic circuits, analogous to how they are designed in the electronics industry.  Here, the design flow starts with an abstract representation, i.e., a circuit schematic.  We begin with symbols for the components,  place them on a schematic, and connect them.   This allows us to immediately simulate the circuit by providing the desired stimulus.  Behind the scenes, there are component models.  The designer does not need to develop them, since they are provided in the design kit.  Advanced PDKs will include active optical components, and electronics.  
+>>>>>>> origin/master
 
 In this flow, the layout is created on the basis of the schematic.  The software aids the designer in creating the layout by reading the schematic as the layout is generated; specifically component placement can be inferred from the schematic, and the connectivity between components is maintained to aid in the routing.
 
 The verification step involves two parts: 1) manufacturing verification (minimum features size, etc), known as Design Rule Check (DRC), and 2) functional verification, known as Layout Versus Schematic  (LVS).  The latter is critical for large circuits.  Since we have a schematic and a layout, we have the opportunity to compare them.  The LVS tool uses a set of rules to recognize the components and their connectivity in the layout, known as netlist extraction, and then compares the components and connectivity with the original schematic.  This verification step can identify incorrect connectivity, such as disconnected wires and waveguides, and component errors such as incorrect components or incorrect parameters.
 
-Once the layout of the circuit is deemed to be correct, the LVS tool can extract the parameters from the layout and update the schematic.  For photonics, the lengths of your waveguides, as drawn, is often critical in determining the performance.  For example, the lengths of the waveguides in an interferometer need to be calculated so that we can obtain an accurate estimation and simulation of the free spectral range (FSR). After the schematic is updated, the designer can re-simulate the circuit to verify that it operates as expected once the details (such as waveguide length in photonics, or parasitics in electronics) are included.
+Once the layout of the circuit is deemed to be correct, the LVS tool can extract the parameters from the layout and update the schematic.  For photonics, the lengths of your waveguides, as drawn, is often critical in determining performance.  For example, the lengths of the waveguides in an interferometer need to be calculated so that we can obtain an accurate estimation and simulation of the free spectral range (FSR). After the schematic is updated, the designer can re-simulate the circuit to verify that it operates as expected once the details (such as waveguide length in photonics, or parasitics in electronics) are included.
 
 
 In contrast to the traditional photonics design approach, this design flow has a much more well established design kit, and enables rapid design of complex circuits, without having to spend time on modelling individual components.  This type of design has been critical to the success of the electronics industry where circuits have thousands to billions of components.
 
-An evolution that is expected for integrated photonics design is that we are moving towards a methodology similar to CMOS design leading to a distinct skill sets.  For example, circuit designers will need to know the minimum of information about how a directional coupler works, but will not need to design them (The main knowledge required is that its function is similar to a beam splitter).  However, the circuit designer will be highly attuned to the performance criteria of the splitter (e.g., wavelength dependance of the splitting ratio, insertion loss, power splitting balance, sensitivity to manufacturing variations) and how these impact the circuit performance (e.g., extinction ratio, crosstalk).  This enables the circuit designer to focus on design at a higher level, including system implementation.
+<<<<<<< HEAD
+An evolution that is expected for integrated photonics design is that we are moving towards a methodology similar to CMOS design leading to a distinct skill sets.  For example, circuit designers will need to know the minimum of information about how a directional coupler works, but will not need to design them (the main knowledge required is that its function is similar to a beam splitter).  However, the circuit designer will be highly attuned to the performance criteria of the splitter (e.g., wavelength dependance of the splitting ratio, insertion loss, power splitting balance, sensitivity to manufacturing variations) and how these impact the circuit performance (e.g., extinction ratio, crosstalk).  This enables the circuit designer to focus on design at a higher level, including system implementation.
+=======
+As the field of integrated photonics progresses, we expect that the industry will further evolve towards how CMOS electronics design is done.  In particular, this will lead to a partitioning of design tasks, with each task requiring a distinct skill set.
+%An evolution that is expected for integrated photonics design is that we are moving towards a methodology similar to CMOS design leading to a distinct skill sets.  
+For example, circuit designers will need to know the minimum of information about how a directional coupler works, but will not need to design them (the main knowledge required is that its function is similar to a beam splitter).  However, the circuit designer will be highly attuned to the performance criteria of the splitter (e.g., wavelength dependance of the splitting ratio, insertion loss, power splitting balance, sensitivity to manufacturing variations) and how these impact the circuit performance (e.g., extinction ratio, crosstalk).  This enables the circuit designer to focus on design at a higher level, including system implementation.
+>>>>>>> origin/master
 
 
 \subsection{Post-Layout Simulation}
 
-Post-layout simulation refers to circuit simulations that are performed after the layout is created.  In the schematic-driven design flow, this involves extracting parameters from the layout, and updating the schematic.  However, there is another use case for post-layout simulations.  Namely, we desire the capability to simulate directly from a layout without requiring a schematic (e.g., created by a different designer,  created using different software, and in general if the schematic is not available).
+Post-layout simulation refers to circuit simulations that are performed after the layout is created.  In the schematic-driven design flow, this involves extracting parameters from the layout, and updating the schematic.  However, there is another use case for post-layout simulations.  Namely, we desire the capability to simulate directly from a layout without requiring a schematic (e.g., for layouts created by a different designer,  layouts created using different software, and in general if the schematic is not available).
 
 In this case, the LVS tool can be used to create a netlist representation of the circuit.  This is in fact easier to perform than the layout versus schematic operation described above, as it only requires the netlist extraction step.  The requirement for this functionality is that each component is supported by the library / PDK.  This is necessary so that the LVS tool can recognize the devices correctly, and label them with the appropriate component model.  Typically, the components have added marking layers that identify the components, perhaps their names, where the input / output ports are, and provide port names.
 
@@ -275,23 +284,47 @@ In order to perform Monte Carlo simulations, we require parameterized component 
 \subsubsection{S-Parameter component models}
 \label{SparamModel}
 As described in Section~\ref{sec:circuitsim}, we can model components using S-parameters.  
-We begin by generating S-parameters for the corner cases (e.g., components with variations ($\Delta$w (nm), $\Delta$h (nm)) of (+20, +10), (+20, -10), (-20, +10) and (-20, -10)), as shown in Fig.~\ref{s-interpolation}(a).  For each Monte Carlo iteration, we interpolate the S-parameters for the desired thickness and width variation. The model can also include multiple modes (e.g., TE and TM polarization).
+<<<<<<< HEAD
+<<<<<<< HEAD
+We begin by generating S-parameters for the corner cases (e.g., components with variations ($\Delta$w (nm), $\Delta$h (nm)) of (+20, +10), (+20, -10), (-20, +10) and (-20, -10)), as shown in Fig.~\ref{S_Interpolation1}.  For each Monte Carlo iteration, we interpolate the S-parameters for the desired thickness and width variation. The model can also include multiple modes (e.g., TE and TM polarization).
+=======
+We begin by generating S-parameters for the corner cases (e.g., components with variations ($\Delta$w (nm), $\Delta$h (nm)) of (+20, +10), (+20, -10), (-20, +10) and (-20, -10)), as shown in Fig.~\ref{s-interpolation}(a).  For each Monte Carlo iteration, we interpolate the S-parameters for the desired thickness and width variation.  We implement this interpolation as a script within the component in Lumerical INTERCONNECT.  The inputs to the component are the thickness and width.
+The model can also include multiple modes (e.g., TE and TM polarization).
+>>>>>>> origin/master
 
-We use a multidimensional spline interpolation method, which allows for the estimation of the amplitude and phase for each S-parameter taking into account its dependency on multiple parameters, such as the optical wavelength (or frequency), thickness and width.  S-parameters passivity and reciprocity can also be tested and enforced, to avoid violating energy conservation laws.
+We use a multidimensional spline interpolation method, which allows for the estimation of the amplitude and phase for each S-parameter taking into account its dependency on multiple parameters, such as the optical wavelength (or frequency), thickness and width.  S-parameters passivity and reciprocity can also be tested and enforced, to avoid violating energy conservation laws.  
 
-This can be applied to components such as directional couplers, where the phase through the device is dependant on the thickness and width of the waveguide.  Two directional couplers can be connected to create a ring resonator sub-circuit, and the performance of the ring resonator (resonance frequency, free spectral range, extinction ratio) will vary with the thickness and width variability introduced into the directional coupler model.  As an example, Fig.~\ref{s-interpolation}(b) shows the S-parameters for the four process corners, and one example interpolated case for a 2$\times$2 splitter, a device described in Ref.~\citen{lu2015broadband}. 
+<<<<<<< HEAD
+This can be applied to components such as directional couplers, where the phase through the device is dependant on the thickness and width of the waveguide.  Two directional couplers can be connected to create a ring resonator sub-circuit, and the performance of the ring resonator (resonance frequency, free spectral range, extinction ratio) will vary with the thickness and width variability introduced into the directional coupler model.  As an example, Fig.~\ref{S_Interpolation2} shows the S-parameters for the four process corners, and one example interpolated case for a 2$\times$2 splitter, a device described in Ref.~\citen{lu2015broadband}. 
+=======
+This approach can be applied to components such as directional couplers, where the phase through the device is dependant on the thickness and width of the waveguide.  Two directional couplers can be connected to create a ring resonator sub-circuit, and the performance of the ring resonator (resonance frequency, free spectral range, extinction ratio) will vary with the thickness and width variability introduced into the directional coupler model.  As an example, Fig.~\ref{s-interpolation}(b) shows the S-parameters for the four process corners, and one example interpolated case for a 2$\times$2 splitter, a device described in Ref.~\citen{lu2015broadband}. 
+>>>>>>> origin/master
+=======
+We begin by generating S-parameters for the corner cases (e.g., components with variations ($\Delta$w (nm), $\Delta$h (nm)) of (+20, +10), (+20, -10), (-20, +10) and (-20, -10)), as shown in Fig.~\ref{s-interpolation}(a).  For each Monte Carlo iteration, we interpolate the S-parameters for the desired thickness and width variation.  We implement this interpolation as a script within the component in Lumerical INTERCONNECT.  The inputs to the component are the thickness and width.
+The model can also include multiple modes (e.g., TE and TM polarization).
+
+We use a multidimensional spline interpolation method, which allows for the estimation of the amplitude and phase for each S-parameter taking into account its dependency on multiple parameters, such as the optical wavelength (or frequency), thickness and width.  S-parameters passivity and reciprocity can also be tested and enforced, to avoid violating energy conservation laws.  
+
+This approach can be applied to components such as directional couplers, where the phase through the device is dependant on the thickness and width of the waveguide.  Two directional couplers can be connected to create a ring resonator sub-circuit, and the performance of the ring resonator (resonance frequency, free spectral range, extinction ratio) will vary with the thickness and width variability introduced into the directional coupler model.  As an example, Fig.~\ref{s-interpolation}(b) shows the S-parameters for the four process corners, and one example interpolated case for a 2$\times$2 splitter, a device described in Ref.~\citen{lu2015broadband}. 
+>>>>>>> origin/master
 
 
 \begin{figure}[tbp]
 	\centering
-	\includegraphics[width=0.9\textwidth]{../figs_paper/S_Interpolation.pdf}
+\subfloat[] {\label{S_Interpolation1}
+\includegraphics[width=0.35\linewidth]{../figs_chris/S_Interpolation1.pdf} } 
+\subfloat[] {\label{S_Interpolation2}
+\includegraphics[width=0.5\linewidth]{../figs_chris/S_Interpolation2.pdf} } 
     \caption[]{(a) Process corners for two process parameters: waveguide height and width; (b) S-parameters for  a 2$\times$2  splitter, for the four process corners, and interpolated for an example geometry.}
     \label{s-interpolation}
 \end{figure}
 
-\begin{figure}[tbp]
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.95\textwidth]{../figs_paper/MZI_common_MC.pdf}
+\subfloat[] {\label{MZI_simple_MC1}
+\includegraphics[width=0.5\linewidth]{../figs_chris/MZI_simple_MC1.pdf} } 
+\subfloat[] {\label{MZI_simple_MC2}
+\includegraphics[width=0.5\linewidth]{../figs_chris/MZI_simple_MC2.pdf} } 
     \caption[]{(a) Layout of balanced Mach-Zehnder Interferometer test structure; (b) Monte Carlo simulation results for the output transmissions.}
     \label{MZI_common_MC}
 \end{figure}
@@ -308,7 +341,7 @@ For the case of the Bragg grating, for example, we can assume that the manufactu
 \label{sec:corner}
 In electronics design, it is common to perform a corner analysis on a circuit.  The designer chooses a model from an N-dimensional process variation parameter space, with $2^N$ choices.  Typically, N=2, as a result of two physical variations, and each variable is assigned whether the transistor is Slow (S), Typical (T) or Fast (F).  All transistors in the circuit use the same model, namely they all experience the same process variation.  While this is useful in electronics in predicting the worst and best case for how fast a chip will operate (e.g., transimpedance amplifier for a detector, or a driver for a modulator), unfortunately this approach is not appropriate for photonics.  
 
-First, we demonstrate this approach on a small circuit, Figure~\ref{MZI_common_MC}(a), which is a Mach-Zehnder Interferometer consisting of two 2$\times$2 splitters connected with identical waveguides.  We assume that both devices and waveguides experience a common variability.  Here, the waveguide width and thickness are varied using a Monte Carlo simulation (where width and height are independent random variables), with each value assigned to each component.  The results of the simulations are shown in  Figure~\ref{MZI_common_MC}(b), which show that the extinction ratio of the interferometer varies as a result of the manufacturing variability.  The results obtained here are independent of the lengths and paths of the two waveguides, provided that the path length difference in the interferometer is $\Delta L = 0$ (i.e., a balanced interferometer). However, we know that from experiments, this is not the case.  
+First, we demonstrate this approach on a small circuit, Figure~\ref{MZI_simple_MC1}, which is a Mach-Zehnder Interferometer consisting of two 2$\times$2 splitters connected with identical waveguides.  We assume that both devices and waveguides experience a common variability.  Here, the waveguide width and thickness are varied using a Monte Carlo simulation (where width and height are independent random variables), with each value assigned to each component.  The results of the simulations are shown in  Figure~\ref{MZI_simple_MC2}, which show that the extinction ratio of the interferometer varies as a result of the manufacturing variability.  The results obtained here are independent of the lengths and paths of the two waveguides, provided that the path length difference in the interferometer is $\Delta L = 0$ (i.e., a balanced interferometer). However, we know that from experiments, this is not the case.  
 
 Experimental results for balanced interferometers (e.g., travelling wave modulators) show that a ``parasitic'' free-spectral (FSR) range is observed.  In some designs, this FSR can be quite easily observed in the optical spectrum, and corresponds to a large (several $\pi$) optical path difference.  The same is observed in identical ring resonators fabricated on the same die.  The within-die variations lead to a distribution of resonance frequencies.  Furthermore, experimental observations show that the variability between devices is correlated to distance between them.  For example, two ring resonators closely spaced will have similar resonance frequencies, while those drawn far apart will be highly mismatched.  This is common knowledge in analog circuit design, where critical paths are drawn closely together on the mask to minimize the differential error. 
 
@@ -327,49 +360,79 @@ Our methodology  provides insight into the significance of compact layouts for p
 
 \begin{figure}[h]
     \centering
-    \label{flow_chart}\includegraphics[width=\linewidth]{flow_chart.pdf}
-    \caption{(a) Flow chart of the proposed methodology; (b) simulated waveguide linewidth deviations across a wafer; (c) simulated waveguide thickness deviations across a wafer.}
-    \label{flow_chart}  
+\subfloat[] {\label{flow_chart}
+\includegraphics[width=0.35\linewidth]{../figs_chris/flow_chart.pdf} } 
+\subfloat[] {\label{wafer_maps}
+\includegraphics[width=0.4\linewidth]{../figs_chris/wafer_maps.pdf} } 
+    \caption{(a) Flow chart of the proposed methodology; (b) simulated waveguide linewidth ($\Delta w$) and thickness ($\Delta h$) deviations across a wafer.} 
 \end{figure}
 
-Figure \ref{flow_chart}(a) shows the flow chart of our proposed methodology. The procedure includes: 
+Figure \ref{flow_chart} shows the flow chart of our proposed methodology. The procedure includes: 
 \begin{itemize}
 \item First, the layout for silicon photonic circuits and/or devices under test are created.  In the example presented here, they are designed using KLayout \cite{www_klayout}. 
 \item
 The netlist is extracted from the layout, either using Mentor Graphics LVS or the SiEPIC-EBeam-PDK add-on \cite{siepic-ebeam-pdk} to KLayout \cite{www_klayout}.  The netlist provides a list of the primitive components in the library and the connectivity between components.  The netlist is imported into Lumerical INTERCONNECT for circuit simulations. 
 \item
-The third step is the generation of a virtual wafer.  Silicon waveguide width deviations, $\Delta w(x,y)$, and wafer thickness deviations, $\Delta h(x,y)$, are simulated across the chip, as illustrated in the maps in Figures~\ref{flow_chart}(b) and \ref{flow_chart}(c), respectively. Both deviations are characterized by a sigma RMS amplitude and a correlation length, and both are based on experimental results \cite{lukas14:OFC,hochberg:wafer}. In each run of the Monte Carlo simulation, different deviation maps are be generated in Lumerical INTERCONNECT.
+The third step is the generation of a virtual wafer.  Silicon waveguide width deviations, $\Delta w(x,y)$, and wafer thickness deviations, $\Delta h(x,y)$, are simulated across the chip, as illustrated in the maps in Figure~\ref{wafer_maps}. Both deviations are characterized by a sigma RMS amplitude and a correlation length, and both are based on experimental results \cite{lukas14:OFC,hochberg:wafer}. In each run of the Monte Carlo simulation, different deviation maps are be generated in Lumerical INTERCONNECT.
 \item
 According to the spatially-dependent waveguide width and thickness map, the optical S-parameters of primitive elements and the optical propagation constants of connecting waveguides are calculated.  This is performed using interpolation in INTERCONNECT as described in Section~\ref{SparamModel}. 
 \item
-The circuit with components updated based on their positions is simulated.  This is repeated several times, and the results can be visualized, as in Figure~\ref{MZI_circuit2_MC}. Histograms and statistical analysis can be performed, as in Figure~\ref{error}.
+The circuit with components updated based on their positions is simulated.  This is repeated several times, and the results can be visualized, as in Figure~\ref{MZI_circuit2_MC}. 
 \end{itemize}
 
 \begin{figure}[t]
     \centering
-    \label{error}\includegraphics[width=0.8\linewidth]{error.pdf}
-    \caption{Box scatter plot of the phase error of a balanced Mach-Zehnder Interferometer versus waveguide spacing, generated using the Enhanced Monte Carlo simulations.} 
-    \label{error}
+\subfloat[] {\label{MZI_spatial_MC1}
+\includegraphics[width=0.5\linewidth]{../figs_chris/MZI_spatial_MC1.pdf} } 
+\subfloat[] {\label{MZI_spatial_MC2}
+\includegraphics[width=0.5\linewidth]{../figs_chris/MZI_spatial_MC2.pdf} } 
+    \caption{(a) Layout of balanced Mach-Zehnder Interferometer test structure; (b) Monte Carlo simulation results for the output transmissions.} 
+    \label{spatial}
 \end{figure}
 
 
+<<<<<<< HEAD
+%The scatter plot in Figure~\ref{error} shows the simulated phase error of a balanced Mach-Zehnder Interferometer versus the waveguide spacing between two arms, in a 248 nm silicon photonics process. In the Monte Carlo simulations, the horizontal length of the phase arms, $L$,  is 200 $\mu m$. The phase error is defined as the absolute optical phase difference between the two phase arms. Ideally, the phase error should be 0 when there are no fabrication variations. However, this figure clearly shows that the mean of the phase error for an ensemble of MZIs is approximately linearly proportional to the waveguide spacing, emphasizing the importance of very compact layout designs, particularly where phase matching is required.  This simulation is similar to the proportionality  observed experimentally in ring resonators \cite{lukas14:OFC}.  The simulated phase error can be used to estimate the trimming power required for MZI-based photonic switches. 
+Now, we demonstrate this approach on a large Mach-Zehnder interferometer consisting of two 2$\times$2 splitters connected with identical waveguides, as shown in Figure~\ref{MZI_spatial_MC1}. Compared with the test structure in Figure~\ref{MZI_simple_MC1}, here the phase arms of the MZI are much longer and are further apart in space.  The results of the simulations are shown in Figure~\ref{MZI_spatial_MC2}, which show that the extinction ratio of the interferometer is no longer distinguishable due to the spatial dependent phase errors.
+=======
 The scatter plot in Figure~\ref{error} shows the simulated phase error of a balanced Mach-Zehnder Interferometer versus the waveguide spacing between two arms, in a 248 nm silicon photonics process. In the Monte Carlo simulations, the horizontal length of the phase arms, $L$,  is 200 $\mu m$. The phase error is defined as the absolute optical phase difference between the two phase arms. Ideally, the phase error should be 0 when there are no fabrication variations. However, this figure clearly shows that the mean of the phase error for an ensemble of MZIs is approximately linearly proportional to the waveguide spacing, emphasizing the importance of very compact layout designs, particularly where phase matching is required.  This simulation is similar to the proportionality  observed experimentally in ring resonators \cite{lukas14:OFC}.  The simulated phase error can be used to estimate the trimming power required for MZI-based photonic switches. 
 
+<<<<<<< HEAD
+Another example of the Monte Carlo method is its application to a Dual Phase Shifted Waveguide Bragg Grating (DPS-WBG) \cite{burla2013integrated, bedard2016dual}.  This device has applications for microwave photonics (true time delay, TTD, for broadband microwave signals) \cite{burla2013integrated} and high-speed data communication (Bragg grating modulator) \cite{bedard2016dual}.  This device is a coupled cavity, similar to coupled ring resonators.  In the ideal case, the resonance frequency of the two cavities is perfectly matched.  However, differential manufacturing errors lead to the gratings being slightly different, which results in the splitting of the two modes.  The central peak in the transmission of the device is highly sensitive to this variation; namely the peak's insertion loss varies.  What is more remarkable is the reflection spectrum. In the ideal case, there is a dip at the resonance frequency.  With a slight mismatch between the components, the peak can completely vanish; this device now operates as an all-pass filter with a phase shift.  The transmission and reflection spectrum can also be tuned by heating each section.  What is important to note for this sub-circuit / compound device is that manufacturing variability needs to be taken into account during the design stage, in order to have a correct understanding of the its performance.
+
+>>>>>>> origin/master
+=======
+Another example application of the Monte Carlo method is for the Dual Phase Shifted Waveguide Bragg Grating (DPS-WBG) \cite{burla2013integrated, bedard2016dual}.  This device has applications for microwave photonics (true time delay, TTD, for broadband microwave signals) \cite{burla2013integrated} and high-speed data communication (Bragg grating modulator) \cite{bedard2016dual}.  It consists of  coupled cavity, similar to coupled ring resonators, except that it is implemented using three Bragg gratings with a quarter-wavelength phase shift section separating each grating, as shown in Figure~\ref{DPSWBG_gds}.  In the ideal case, the resonance frequency of the two cavities is perfectly matched.  However, differential manufacturing errors lead to the gratings being slightly different, which results in the splitting of the two modes.  The central peak in the transmission of the device is highly sensitive to this variation; namely the peak's insertion loss varies.  What is more remarkable is the reflection spectrum. In the ideal case, there is a dip at the resonance frequency.  With a slight mismatch between the components, the peak can completely vanish; this device now operates as an all-pass filter with a phase shift.  The transmission and reflection spectrum can also be tuned by heating each section.  What is important to note for this sub-circuit / compound device is that manufacturing variability needs to be taken into account during the design stage, in order to have a correct understanding of the its performance.
+
+
+\begin{figure}[tbp]
+\begin{center}   
+\subfloat[Layout of a Dual Phase Shifted Waveguide Bragg Grating (DPS-WBG).]{\label{DPSWBG_gds} \includegraphics[width=\linewidth]{../figs_paper/DPSWBG_gds} } \\
+\subfloat[Circuit simulation of the nominal design] {\label{DPSWBG1}
+\includegraphics[width=0.4\linewidth]{../figs_paper/DPSWBG1} }
+\subfloat[Monte Carlo circuit simulation including spatial correlations (one simulation).] {\label{DPSWBG2}
+\includegraphics[width=0.4\linewidth]{../figs_paper/DPSWBG2} }
+\caption{Layout and simulations of a Dual Phase Shifted Waveguide Bragg Grating (DPS-WBG) \cite{burla2013integrated}.}
+\label{Bragg}
+\end{center}
+\end{figure}
+
+>>>>>>> origin/master
 
 
 \section{Conclusion}\label{sec6}
 
-%The opportunity for silicon photonics is to leverage three decades of CMOS Electronic Design Automation (EDA) tool development, and two decades of optical design software development.
+In this paper, we described a design methodology that takes advantage of CMOS Electronic Design Automation (EDA) tools coupled to optical design software.  Whether the design is implemented using a schematic-first or a layout-first approach, incorporating manufacturing yield and process variations into the design flow is a critical step in the functional verification of the circuit.  Simulating process variations is performed by synchronizing the schematic with the as-drawn layout using a netlist extraction approach, and using Monte Carlo analysis that uses parameterized optical components.
+The  objective of the design flow is ``first-time-right'' design, where circuits function correctly the first time they are fabricated; this can be achieved only if the designer takes manufacturing challenges into consideration and applies effective mitigation strategies in order to build circuits that are immune to these variations.
+
 %Full-flow design environments are becoming a reality for silicon photonics.
 %
 %The mature CMOS fabrication processes and multi-project wafer (MPW) fabrication runs 
 %%Stable processes that are repeatable
-%enable the development of component libraries for system design.  Emphasis needs to be placed on developing parameterized components to bring increased utility for system-level design, and incorporating manufacturing yield and process variations into the design flow.  
+%enable the development of component libraries for system design.  
 %
 %Similar to the electronics industry, photonic integrated circuit design and fabrication is evolving towards specialized roles, namely: a) fabrication and processing, b) EDA tools; c) component, library, and PDKs; and, d) system design.  This separation of roles will lead to accelerated product development and ultimately aiding the silicon photonics industry achieve its objectives. 
 
-
-The  objective of this work is ``first-time-right'' design, where circuits function correctly the first time they are fabricated; this can be achieved only if the designer takes manufacturing challenges into consideration and applies effective mitigation strategies in order to build circuits that are immune to these variations.
 
 
 
