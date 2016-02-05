@@ -35,6 +35,19 @@ Liu, B., ``Spatial correlation extraction via random field simulation and
   conference on Design, automation and test in
   Europe}{\nolinebreak\hspace{0.1em}]},   527--532, ACM (2008).
 
+\bibitem{cheng2011physically}
+Cheng, L., Gupta, P., Spanos, C.~J., Qian, K., and He, L., ``Physically
+  justifiable die-level modeling of spatial variation in view of systematic
+  across wafer variability,'' {\em Computer-Aided Design of Integrated Circuits
+  and Systems, IEEE Transactions on}~{\bf 30}(3),  388--401 (2011).
+
+\bibitem{zhang2013efficient}
+Zhang, W., Balakrishnan, K., Li, X., Boning, D.~S., Saxena, S., Strojwas, A.,
+  and Rutenbar, R., ``Efficient spatial pattern analysis for variation
+  decomposition via robust sparse regression,'' {\em Computer-Aided Design of
+  Integrated Circuits and Systems, IEEE Transactions on}~{\bf 32}(7),
+  1072--1085 (2013).
+
 \bibitem{lukas14:OFC}
 Chrostowski, L., Wang, X., Flueckiger, J., Wu, Y., Wang, Y., and Fard, S.~T.,
   ``Impact of fabrication non-uniformity on chip-scale silicon photonic

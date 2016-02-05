@@ -232,8 +232,8 @@ However, in many cases, the bend has already been optimized, analyzed and chosen
 
 
 \section{Circuit Simulations}
-
-We previously described how to perform circuit simulations of photonic circuits using compact models created from S-parameters \cite{chrostowski2014design, chrostowski2015silicon}.  This is a powerful technique since it allows any passive device to be represented, without having to establish expressions that describe the behaviour of the component.  Efficient circuit simulations can be by achieved by using S-parameters directly, in particular for frequency (wavelength) domain simulations, as the S-parameters are already wavelength dependant.  For time domain simulations, the circuit modelling tool internally converts the S-parameters into a time-domain representation.  
+\label{sec:circuitsim}
+We previously described how to perform circuit simulations of photonic circuits using compact models created from S-parameters which are simulated using 3D-FDTD or other numerical techniques\cite{chrostowski2014design, chrostowski2015silicon}.  This is a powerful technique since it allows any passive device to be represented, without having to establish expressions that describe the behaviour of the component.  Efficient circuit simulations can be by achieved by using S-parameters directly, in particular for frequency (wavelength) domain simulations, as the S-parameters are already wavelength dependant.  For time domain simulations, the circuit modelling tool internally converts the S-parameters into a time-domain representation.  
 
 We provide an example of a Bragg grating cavity test structure layout in Figure~\ref{Bragg}, together with the simulations from the extracted netlist.  The response of the circuit deviates from the ideal Bragg grating cavity response, due: 1) the grating coupler insertion loss, 2) the back-reflections from the grating couplers, and 3) the insertion loss and back-reflections from the tapers.  Ripples are observed in both the transmission and reflection spectra, that are not present in the ideal model.  Furthermore, the shapes,  positions, and oscillation frequencies of the ripples are dependant on the optical phases introduced by the various components, such as the waveguides.  Hence it is important to extract the lengths and device parameters for an accurate simulation.
 
@@ -267,57 +267,63 @@ We provide an example of a Bragg grating cavity test structure layout in Figure~
 \label{sec:variability}
 The high refractive index contrast of SOI permits sharp waveguide bends and ultra-small device sizes, making it promising for the development of densely integrated photonic circuits. However, silicon photonic devices face serious manufacturability challenges. Fabrication errors on either the waveguide width or waveguide thickness have a significant effect on the propagation constant of light, and, thus, circuits such as interferometers are highly sensitive to manufacturing, as shown in Figure~\ref{MZI_circuit2_MC}.
 
-Thus, taking manufacturing variability into account in order to predict yield is critical for photonic integrated circuits. In the electronics community, corner analysis and Monte Carlo simulations are typically used to analyze fabrication variability; the former of predicts the worst-case performance of the circuit, while the later creates histograms and distributions, and is typically based on process variations applied to the entire circuit.  In the simplest Monte Carlo approach, the same variations are applied to all components in the circuit, thus the simulation considers common-mode variability only (i.e., all devices are slightly thicker).  
+Thus, taking manufacturing variability into account in order to predict yield is critical for photonic integrated circuits. In the electronics community, corner analysis and Monte Carlo simulations are typically used to analyze fabrication variability; the former of predicts the worst-case performance of the circuit, while the later creates histograms and distributions, and is based on statistical process variations.  In the simplest Monte Carlo approach, the same process variations are applied to all components in the circuit, thus the simulation considers common-mode variability only (e.g., all devices are slightly thicker).  
 
 \subsection{Component models taking into account variability}
-In order to perform Monte Carlo simulations, we require parameterized component models that are continuous with the variables of interest (e.g., thickness, width).  Although one approach is to simulate each component on a fine mesh (e.g., 0.1 nm steps in each deviation variable), this may be computationally prohibitive.  We developed more efficient approaches, as follows.
+In order to perform Monte Carlo simulations, we require parameterized component models that are continuous with the variables of interest (e.g., thickness, width).  Although one approach is to simulate each component on a fine mesh (e.g., 0.1 nm steps in each deviation variable), this is computationally prohibitive.  We developed more efficient approaches, as follows.
 
 \subsubsection{S-Parameter component models}
-A multidimensional spline interpolation method allows for estimation of the amplitude and phase for each S-parameter taking into account its dependency on multiple parameters, such as frequency, thickness and width. S-parameters passivity and reciprocity can also be tested and enforced, to avoid violating energy conservation laws.
+\label{SparamModel}
+As described in Section~\ref{sec:circuitsim}, we can model components using S-parameters.  
+We begin by generating S-parameters for the corner cases (e.g., components with variations ($\Delta$w (nm), $\Delta$h (nm)) of (+20, +10), (+20, -10), (-20, +10) and (-20, -10)), as shown in Fig.~\ref{s-interpolation}(a).  For each Monte Carlo iteration, we interpolate the S-parameters for the desired thickness and width variation. The model can also include multiple modes (e.g., TE and TM polarization).
 
-For components that are described by S-parameters, we begin by generating S-parameters for the corner cases (e.g., components with variations ($\Delta$w (nm), $\Delta$h (nm)) of (+20, +10), (+20, -10), (-20, +10) and (-20, -10)), as shown in Fig.~\ref{s-interpolation}(a).  For each Monte Carlo iteration, we interpolate the S-parameters for the desired thickness and width variation. The model can include multiple modes (e.g., TE and TM polarization).
+We use a multidimensional spline interpolation method, which allows for the estimation of the amplitude and phase for each S-parameter taking into account its dependency on multiple parameters, such as the optical wavelength (or frequency), thickness and width.  S-parameters passivity and reciprocity can also be tested and enforced, to avoid violating energy conservation laws.
 
-This can be applied to components such as directional couplers, where the phase through the device is dependant on the thickness and width of the waveguide.  Two directional couplers can be connected to create a ring resonator sub-circuit, and the performance of the ring resonator (resonance frequency, free spectral range, extinction ratio) will vary with the thickness and width variability introduced into the directional coupler model. As an example, Fig.~\ref{s-interpolation}(b) shows the S-parameters for both the corner and interpolated cases of a 2$\times$2 power splitter.
-
-
-
-
+This can be applied to components such as directional couplers, where the phase through the device is dependant on the thickness and width of the waveguide.  Two directional couplers can be connected to create a ring resonator sub-circuit, and the performance of the ring resonator (resonance frequency, free spectral range, extinction ratio) will vary with the thickness and width variability introduced into the directional coupler model.  As an example, Fig.~\ref{s-interpolation}(b) shows the S-parameters for the four process corners, and one example interpolated case for a 2$\times$2 splitter, a device described in Ref.~\citen{lu2015broadband}. 
 
 
 \begin{figure}[tbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{../figs_paper/S_Interpolation.pdf}
-    \caption[]{(a) Process corners for two process parameters: waveguide height and width; (b) S-parameter interpolation for a 2$\times$2 power splitter.}
+	\includegraphics[width=0.9\textwidth]{../figs_paper/S_Interpolation.pdf}
+    \caption[]{(a) Process corners for two process parameters: waveguide height and width; (b) S-parameters for  a 2$\times$2  splitter, for the four process corners, and interpolated for an example geometry.}
     \label{s-interpolation}
 \end{figure}
 
 \begin{figure}[tbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{../figs_paper/MZI_common_MC.pdf}
+	\includegraphics[width=0.95\textwidth]{../figs_paper/MZI_common_MC.pdf}
     \caption[]{(a) Layout of balanced Mach-Zehnder Interferometer test structure; (b) Monte Carlo simulation results for the output transmissions.}
-    \label{MZI_commmon_MC}
+    \label{MZI_common_MC}
 \end{figure}
 
 \subsubsection{Waveguides}
-2D case. easiest is to simply parameterize the effective index as a function of the thickness and width.
+\label{sec:waveguide}
+The waveguide transfer function of a waveguide is described by propagation properties such as loss, effective index, group index and dispersion, and need to be parameterized as a function of frequency, thickness and width. 
+We can create parameterized models for the waveguide in a similar manner as in Section~\ref{SparamModel}, namely using interpolation.  We begin with 2D cross-section simulations of the waveguide (eigenmode simulations), and generate look-up tables for the effective index and group index for a range of geometries.  We then perform a multidimensional spline interpolation as above.
 
-*****  add something intelligent here *****
-The waveguide transfer function is described by propagation properties such as loss, effective index, group index and dispersion, and are parameterized as a function of frequency, thickness and width. 
+\subsubsection{Sub-circuit approach}
+For the case of the Bragg grating, for example, we can assume that the manufacturing only affects the central Bragg wavelength.  If all other parameters remain the same (grating coupling coefficient) then a small perturbation to the nominal effective index can be applied.  This can be expressed as two independent linear parameters, $ \frac{\partial n_\text{eff}}{\partial w}$, and $ \frac{\partial n_\text{eff}}{\partial h}$, which are added to the nominal value.  Alternatively, we can use the waveguide model above as an input parameter to the Bragg grating compact model.  Specifically, the Bragg wavelength, $\lambda_B$, is determined by $\lambda_B = 2 n_\text{eff} \Lambda$, where $\Lambda$ is the grating period, and $n_\text{eff}$ is the effective index found in Section~\ref{sec:waveguide}.  In this latter approach, we can build up sub-circuits using a combination of primitive elements each with their own built-in manufacturing variability.
 
-\subsubsection{Perturbation approach}
-For the case of the Bragg grating, for example, we can assume that the manufacturing only affects the central Bragg wavelength.  If all other parameters remain the same (grating coupling coefficient) than a small perturbation to the nominal effective index can be applied.  This can be expressed as two independent linear parameters, $ \frac{\partial n_\text{eff}}{\partial w}$, and $ \frac{\partial n_\text{eff}}{\partial h}$, which are added to the nominal value.
+\subsection{Corner Analysis and a simple Monte Carlo}
+\label{sec:corner}
+In electronics design, it is common to perform a corner analysis on a circuit.  The designer chooses a model from an N-dimensional process variation parameter space, with $2^N$ choices.  Typically, N=2, as a result of two physical variations, and each variable is assigned whether the transistor is Slow (S), Typical (T) or Fast (F).  All transistors in the circuit use the same model, namely they all experience the same process variation.  While this is useful in electronics in predicting the worst and best case for how fast a chip will operate (e.g., transimpedance amplifier for a detector, or a driver for a modulator), unfortunately this approach is not appropriate for photonics.  
 
-\subsection{Corner Analysis and  Monte Carlo}
-***please add text for Figure~\ref{MZI_commmon_MC}*** 
+First, we demonstrate this approach on a small circuit, Figure~\ref{MZI_common_MC}(a), which is a Mach-Zehnder Interferometer consisting of two 2$\times$2 splitters connected with identical waveguides.  We assume that both devices and waveguides experience a common variability.  Here, the waveguide width and thickness are varied using a Monte Carlo simulation (where width and height are independent random variables), with each value assigned to each component.  The results of the simulations are shown in  Figure~\ref{MZI_common_MC}(b), which show that the extinction ratio of the interferometer varies as a result of the manufacturing variability.  The results obtained here are independent of the lengths and paths of the two waveguides, provided that the path length difference in the interferometer is $\Delta L = 0$ (i.e., a balanced interferometer). However, we know that from experiments, this is not the case.  
+
+Experimental results for balanced interferometers (e.g., travelling wave modulators) show that a ``parasitic'' free-spectral (FSR) range is observed.  In some designs, this FSR can be quite easily observed in the optical spectrum, and corresponds to a large (several $\pi$) optical path difference.  The same is observed in identical ring resonators fabricated on the same die.  The within-die variations lead to a distribution of resonance frequencies.  Furthermore, experimental observations show that the variability between devices is correlated to distance between them.  For example, two ring resonators closely spaced will have similar resonance frequencies, while those drawn far apart will be highly mismatched.  This is common knowledge in analog circuit design, where critical paths are drawn closely together on the mask to minimize the differential error. 
+
+In summary, corner analysis and Monte Carlo simulations where the variations are applied in common the the entire circuit are inappropriate for the study of circuit variability, since these do not include the spatial correlations that are experimental observed.  They are however useful for predicting individual device variability (e.g., central wavelength of a Bragg grating or ring resonator).
+
 
 \subsection{Monte Carlo with Spatial Correlations}
 
-The challenge in these simulations is to capture the die-to-die, device-to-device (intra-die), and intra-device variations, which have position-dependant correlations; this has been studied and modelled developed for electronic circuits \cite{agarwal2003statistical, liu2008spatial}.  The approach is similar to that developed for electronic circuit timing analysis \cite{agarwal2003statistical}; in  Ref.~\citen{agarwal2003statistical}, the devices are grouped using a partitioning quad-tree approach and each component is assigned several random variables depending on their location in the circuit.  
+In electronics Monte Carlo simulations, it is possible to simulate circuits where a high degree of correlation exists between the variability of closely placed components.  This is included in the model using additional parameters (a mismatch parameter, or a correlation parameter).  The challenge for the designer is to determine these parameters based on a physical layout.
+Ideally, Monte Carlo simulations should capture the die-to-die, device-to-device (intra-die), and intra-device variations, where the within-wafer variations have position-dependant correlations; models for correlation effects have been developed for electronic circuits \cite{agarwal2003statistical, liu2008spatial, cheng2011physically, zhang2013efficient, liao2015efficient}.  For example, for electronic circuit timing analysis, one approach is to group the devices using a partitioning quad-tree approach with each component being assigned several random variables depending on their location in the circuit  \cite{agarwal2003statistical}.  
 
-Correlated yield analysis is attracting increasing attention, and there have been studies investigating the statistical on-chip correlations \cite{lukas14:OFC,hochberg:wafer}, and models for dealing with the uncertainty of devices \cite{MIT:uncertainty}.  From this past work, what is clear is if only common-mode variability is considered (corner analysis, Monte Carlo described above), the simulations do not capture an important type variability -- differential.  Namely, two nominally identical devices side-by-side on a chip will have slightly difference performance.  This difference can have significant impact on system performance (e.g., WDM ring resonators, optical switches) and it cannot be simply compensated by thermally tuning the entire chip.
+In photonics, correlated yield analysis is attracting increasing attention, and there have been several studies investigating the statistical on-chip correlations \cite{lukas14:OFC,hochberg:wafer}, and models for dealing with the uncertainty of devices \cite{MIT:uncertainty}.  From this past work, what is clear is if only common-mode variability is considered (corner analysis,  described in Section~\ref{sec:corner} above), the simulations do not capture an important type variability -- differential, or spatially correlated variability.  Namely, two nominally identical devices side-by-side on a chip will have slightly difference performance.  This difference can have significant impact on system performance (e.g., WDM ring resonators, optical switches) and it cannot be simply compensated by thermally tuning the entire chip, but rather requires individual tuning for each component.  Clearly tuning every single component in a silicon photonics circuit is prohibitive, hence we require a tool to determine which components need to be tuned.  This can be determined by a Monte Carlo analysis that takes spatial correlations into account.
 
-In this work, we propose a methodology that takes correlation between devices into account by using the physical layout in order to perform a manufacturing variability analysis of on-chip photonic integrated circuits.  In our approach, we create a virtual wafer in each Monte Carlo iteration, and each device determines its parameter from the wafer map.
-Beginning with the physical layout, and performing to enhanced Monte Carlo simulations, our methodology  provides insight into the significance of compact layouts for photonic designs, and offers a useful tool for post-layout verification and power trimming estimation.
+In this work, we propose a methodology that takes correlation between devices into account by using the physical layout in order to perform a manufacturing variability analysis of on-chip photonic integrated circuits.  We create a virtual wafer in each Monte Carlo iteration, and each device determines its parameter within the wafer map on the basis of the physical mask layout.
+Our methodology  provides insight into the significance of compact layouts for photonic designs, and offers a useful tool for post-layout verification and power trimming estimation.
 
 \begin{figure}[h]
     \centering
@@ -332,11 +338,11 @@ Figure \ref{flow_chart}(a) shows the flow chart of our proposed methodology. The
 \item
 The netlist is extracted from the layout, either using Mentor Graphics LVS or the SiEPIC-EBeam-PDK add-on \cite{siepic-ebeam-pdk} to KLayout \cite{www_klayout}.  The netlist provides a list of the primitive components in the library and the connectivity between components.  The netlist is imported into Lumerical INTERCONNECT for circuit simulations. 
 \item
-The third step is a wafer simulation.  In INTERCONNECT, silicon waveguide width deviations, $\Delta w(x,y)$, and wafer thickness deviations, $\Delta h(x,y)$, are simulated across the whole wafer, as illustrated in the maps in Figures~\ref{flow_chart}(b) and \ref{flow_chart}(c), respectively. Both deviations are characterized by a sigma RMS amplitude and a correlation length, and both are based on experimental results \cite{lukas14:OFC,hochberg:wafer}. In each run of the Monte Carlo simulation, different deviation maps are be generated. 
+The third step is the generation of a virtual wafer.  Silicon waveguide width deviations, $\Delta w(x,y)$, and wafer thickness deviations, $\Delta h(x,y)$, are simulated across the chip, as illustrated in the maps in Figures~\ref{flow_chart}(b) and \ref{flow_chart}(c), respectively. Both deviations are characterized by a sigma RMS amplitude and a correlation length, and both are based on experimental results \cite{lukas14:OFC,hochberg:wafer}. In each run of the Monte Carlo simulation, different deviation maps are be generated in Lumerical INTERCONNECT.
 \item
-According to the spatially-dependent waveguide width and thickness deviations, the optical S-parameters of primitive elements and the optical propagation constants of connecting waveguides are calculated.  This is performed using interpolation in INTERCONNECT. 
+According to the spatially-dependent waveguide width and thickness map, the optical S-parameters of primitive elements and the optical propagation constants of connecting waveguides are calculated.  This is performed using interpolation in INTERCONNECT as described in Section~\ref{SparamModel}. 
 \item
-The circuit with components updated based on their position is simulated.  This is repeated several times, and the results can be visualized, as in Figure~\ref{MZI_circuit2_MC}. Histograms and statistical analysis can be performed, as in Figure~\ref{error}.
+The circuit with components updated based on their positions is simulated.  This is repeated several times, and the results can be visualized, as in Figure~\ref{MZI_circuit2_MC}. Histograms and statistical analysis can be performed, as in Figure~\ref{error}.
 \end{itemize}
 
 \begin{figure}[t]

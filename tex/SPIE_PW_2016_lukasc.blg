@@ -8,45 +8,45 @@ Warning--empty year in www_klayout
 Warning--empty volume in siepic-ebeam-pdk
 Warning--empty year in siepic-ebeam-pdk
 Warning--empty volume in lukas14:OFC
-You've used 10 entries,
+You've used 12 entries,
             1993 wiz_defined-function locations,
-            562 strings with 5920 characters,
-and the built_in function-call counts, 3092 in all, are:
-= -- 279
-> -- 149
+            577 strings with 6480 characters,
+and the built_in function-call counts, 3876 in all, are:
+= -- 354
+> -- 189
 < -- 0
-+ -- 54
-- -- 44
-* -- 264
-:= -- 420
-add.period$ -- 10
-call.type$ -- 10
-change.case$ -- 9
++ -- 68
+- -- 56
+* -- 338
+:= -- 525
+add.period$ -- 12
+call.type$ -- 12
+change.case$ -- 11
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 146
-empty$ -- 268
-format.name$ -- 44
-if$ -- 737
+cite$ -- 17
+duplicate$ -- 178
+empty$ -- 329
+format.name$ -- 56
+if$ -- 921
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 11
-newline$ -- 33
-num.names$ -- 10
-pop$ -- 27
+int.to.str$ -- 12
+missing$ -- 13
+newline$ -- 39
+num.names$ -- 12
+pop$ -- 29
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 124
+skip$ -- 155
 stack$ -- 0
-substring$ -- 210
-swap$ -- 86
+substring$ -- 282
+swap$ -- 108
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 5
-while$ -- 26
-width$ -- 12
-write$ -- 88
+while$ -- 34
+width$ -- 14
+write$ -- 106
 (There were 5 warnings)
