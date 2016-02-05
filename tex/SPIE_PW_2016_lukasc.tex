@@ -307,14 +307,17 @@ The waveguide transfer function is described by propagation properties such as l
 \subsubsection{Perturbation approach}
 For the case of the Bragg grating, for example, we can assume that the manufacturing only affects the central Bragg wavelength.  If all other parameters remain the same (grating coupling coefficient) than a small perturbation to the nominal effective index can be applied.  This can be expressed as two independent linear parameters, $ \frac{\partial n_\text{eff}}{\partial w}$, and $ \frac{\partial n_\text{eff}}{\partial h}$, which are added to the nominal value.
 
-\subsection{Uniform Monte Carlo}
+\subsection{Corner Analysis and  Monte Carlo}
 ***please add text for Figure~\ref{MZI_commmon_MC}*** 
 
-\subsection{Enhanced Monte Carlo}
+\subsection{Monte Carlo with Spatial Correlations}
 
-The challenge in these simulations is to capture the die-to-die, device-to-device, and intra-device variations, which have position-dependant correlations.  Correlated yield analysis is attracting increasing attention, and there have been studies investigating the statistical on-chip correlations \cite{lukas14:OFC,hochberg:wafer}, and models for dealing with the uncertainty of devices \cite{MIT:uncertainty}.  From this past work, what is clear is if only common-mode variability is considered (corner analysis, Monte Carlo described above), the simulations do not capture an important type variability -- differential.  Namely, two nominally identical devices side-by-side on a chip will have slightly difference performance.  This difference can have significant impact on system performance (e.g., WDM ring resonators, optical switches) and it cannot be simply compensated by thermally tuning the entire chip.
+The challenge in these simulations is to capture the die-to-die, device-to-device (intra-die), and intra-device variations, which have position-dependant correlations; this has been studied and modelled developed for electronic circuits \cite{agarwal2003statistical, liu2008spatial}.  The approach is similar to that developed for electronic circuit timing analysis \cite{agarwal2003statistical}; in  Ref.~\citen{agarwal2003statistical}, the devices are grouped using a partitioning quad-tree approach and each component is assigned several random variables depending on their location in the circuit.  
 
-In this work, we propose, for the first time, a methodology that takes correlation between devices into account by using the physical layout in order to perform a manufacturing variability analysis of on-chip photonic integrated circuits. Beginning with the physical layout, and performing to enhanced Monte Carlo simulations, our methodology  provides insight into the significance of compact layouts for photonic designs, and offers a useful tool for post-layout verification and power trimming estimation.
+Correlated yield analysis is attracting increasing attention, and there have been studies investigating the statistical on-chip correlations \cite{lukas14:OFC,hochberg:wafer}, and models for dealing with the uncertainty of devices \cite{MIT:uncertainty}.  From this past work, what is clear is if only common-mode variability is considered (corner analysis, Monte Carlo described above), the simulations do not capture an important type variability -- differential.  Namely, two nominally identical devices side-by-side on a chip will have slightly difference performance.  This difference can have significant impact on system performance (e.g., WDM ring resonators, optical switches) and it cannot be simply compensated by thermally tuning the entire chip.
+
+In this work, we propose a methodology that takes correlation between devices into account by using the physical layout in order to perform a manufacturing variability analysis of on-chip photonic integrated circuits.  In our approach, we create a virtual wafer in each Monte Carlo iteration, and each device determines its parameter from the wafer map.
+Beginning with the physical layout, and performing to enhanced Monte Carlo simulations, our methodology  provides insight into the significance of compact layouts for photonic designs, and offers a useful tool for post-layout verification and power trimming estimation.
 
 \begin{figure}[h]
     \centering

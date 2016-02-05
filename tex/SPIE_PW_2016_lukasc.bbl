@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{chrostowski2014design}
 Chrostowski, L., Flueckiger, J., Lin, C., Hochberg, M., Pond, J., Klein, J.,
@@ -22,6 +22,18 @@ K{\"o}fferlein, M., ``{KLayout},'' {\em \url{http://www.klayout.de}} .
 \bibitem{siepic-ebeam-pdk}
 Chrostowski, L., ``{SiEPIC EBeam PDK} \& {L}ibrary for {KLayout},'' {\em
   \url{http://github.com/lukasc-ubc/SiEPIC_EBeam_PDK}} .
+
+\bibitem{agarwal2003statistical}
+Agarwal, A., Blaauw, D., and Zolotov, V., ``Statistical timing analysis for
+  intra-die process variations with spatial correlations,'' in [{\em
+  Proceedings of the 2003 IEEE/ACM international conference on Computer-aided
+  design}{\nolinebreak\hspace{0.1em}]},   900, IEEE Computer Society (2003).
+
+\bibitem{liu2008spatial}
+Liu, B., ``Spatial correlation extraction via random field simulation and
+  production chip performance regression,'' in [{\em Proceedings of the
+  conference on Design, automation and test in
+  Europe}{\nolinebreak\hspace{0.1em}]},   527--532, ACM (2008).
 
 \bibitem{lukas14:OFC}
 Chrostowski, L., Wang, X., Flueckiger, J., Wu, Y., Wang, Y., and Fard, S.~T.,
