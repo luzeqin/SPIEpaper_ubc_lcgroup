@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  5 FEB 2016 00:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  5 FEB 2016 18:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -843,208 +843,207 @@ Package pdftex.def Info: ../figs_paper/Process_Design.pdf used on input line 12
  [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../figs
-_paper/Process_Design.pdf>] [2]
-[3] <../figs_paper/SDDvsLDD.pdf, id=119, 1576.39293pt x 847.65193pt>
+_paper/Process_Design.pdf>]
+<../figs_paper/SDDvsLDD.pdf, id=106, 1576.39293pt x 847.65193pt>
 File: ../figs_paper/SDDvsLDD.pdf Graphic file (type pdf)
 
 <use ../figs_paper/SDDvsLDD.pdf>
-Package pdftex.def Info: ../figs_paper/SDDvsLDD.pdf used on input line 191.
+Package pdftex.def Info: ../figs_paper/SDDvsLDD.pdf used on input line 151.
 (pdftex.def)             Requested size: 439.03726pt x 236.07338pt.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 205.
+
+<../figs_paper/SDL_pic_2.JPG, id=108, 1003.3485pt x 654.0435pt>
+File: ../figs_paper/SDL_pic_2.JPG Graphic file (type jpg)
+
+<use ../figs_paper/SDL_pic_2.JPG>
+Package pdftex.def Info: ../figs_paper/SDL_pic_2.JPG used on input line 161.
+(pdftex.def)             Requested size: 487.8225pt x 317.98915pt.
+ [2 <../figs_paper/SDDvsLDD.pdf>] [3 <../figs_paper/SDL_pic_2.JPG>] [4]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 215.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 205.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 215.
 
-Overfull \hbox (6.55307pt too wide) in paragraph at lines 206--207
+Overfull \hbox (6.55307pt too wide) in paragraph at lines 216--217
 []\OT1/ptm/m/n/10 The li-brary which con-tains the com-po-nent's com-pact model
  to be used for sim-u-la-tions (e.g., ``De-sign kit-s/e-beam[]v1.2'') 
  []
 
-[4 <../figs_paper/SDDvsLDD.pdf>]
-<../figs_paper/MZI_circuit2.png, id=226, 794.97pt x 831.105pt>
+<../figs_paper/MZI_circuit2.png, id=223, 794.97pt x 831.105pt>
 File: ../figs_paper/MZI_circuit2.png Graphic file (type png)
 
 <use ../figs_paper/MZI_circuit2.png>
-Package pdftex.def Info: ../figs_paper/MZI_circuit2.png used on input line 229.
+Package pdftex.def Info: ../figs_paper/MZI_circuit2.png used on input line 239.
 
 (pdftex.def)             Requested size: 243.91124pt x 255.0021pt.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 234.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 244.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-(./MZI_circuit2.spi [5 <../figs_paper/MZI_circuit2.png>]) (./MZI_circuit3.spi)
-<../figs_paper/Bragg1.png, id=249, 1710.39pt x 367.3725pt>
+(./MZI_circuit2.spi [5]) (./MZI_circuit3.spi [6 <../figs_paper/MZI_circuit2.png
+>]) <../figs_paper/Bragg1.png, id=289, 1710.39pt x 367.3725pt>
 File: ../figs_paper/Bragg1.png Graphic file (type png)
 
 <use ../figs_paper/Bragg1.png>
-Package pdftex.def Info: ../figs_paper/Bragg1.png used on input line 249.
+Package pdftex.def Info: ../figs_paper/Bragg1.png used on input line 259.
 (pdftex.def)             Requested size: 390.25948pt x 83.82121pt.
 
-<../figs_paper/Bragg2.png, id=250, 1713.40125pt x 213.79875pt>
+<../figs_paper/Bragg2.png, id=290, 1713.40125pt x 213.79875pt>
 File: ../figs_paper/Bragg2.png Graphic file (type png)
 
 <use ../figs_paper/Bragg2.png>
-Package pdftex.def Info: ../figs_paper/Bragg2.png used on input line 251.
+Package pdftex.def Info: ../figs_paper/Bragg2.png used on input line 261.
 (pdftex.def)             Requested size: 390.25948pt x 48.69637pt.
 
-<../figs_paper/Bragg.png, id=251, 1415.2875pt x 537.00626pt>
+<../figs_paper/Bragg.png, id=291, 1415.2875pt x 537.00626pt>
 File: ../figs_paper/Bragg.png Graphic file (type png)
 
 <use ../figs_paper/Bragg.png>
-Package pdftex.def Info: ../figs_paper/Bragg.png used on input line 253.
+Package pdftex.def Info: ../figs_paper/Bragg.png used on input line 263.
 (pdftex.def)             Requested size: 390.25948pt x 148.07458pt.
 
-<../figs_paper/MZI_circuit2_MC.png, id=252, 915.92188pt x 483.8075pt>
+<../figs_paper/MZI_circuit2_MC.png, id=292, 915.92188pt x 483.8075pt>
 File: ../figs_paper/MZI_circuit2_MC.png Graphic file (type png)
 
 <use ../figs_paper/MZI_circuit2_MC.png>
 Package pdftex.def Info: ../figs_paper/MZI_circuit2_MC.png used on input line 2
-65.
+75.
 (pdftex.def)             Requested size: 390.25948pt x 206.1433pt.
- [6] [7 <../figs_paper/Bragg1.png> <../figs_paper/Bragg2.png> <../figs_paper/Br
+ [7] [8 <../figs_paper/Bragg1.png> <../figs_paper/Bragg2.png> <../figs_paper/Br
 agg.png> <../figs_paper/MZI_circuit2_MC.png>] <../figs_chris/S_Interpolation1.p
-df, id=327, 328.22626pt x 323.2075pt>
+df, id=334, 328.22626pt x 323.2075pt>
 File: ../figs_chris/S_Interpolation1.pdf Graphic file (type pdf)
 
 <use ../figs_chris/S_Interpolation1.pdf>
 Package pdftex.def Info: ../figs_chris/S_Interpolation1.pdf used on input line 
-295.
+305.
 (pdftex.def)             Requested size: 170.74084pt x 168.13298pt.
 
-<../figs_chris/S_Interpolation2.pdf, id=328, 418.56375pt x 294.09875pt>
+<../figs_chris/S_Interpolation2.pdf, id=335, 418.56375pt x 294.09875pt>
 File: ../figs_chris/S_Interpolation2.pdf Graphic file (type pdf)
 
 <use ../figs_chris/S_Interpolation2.pdf>
 Package pdftex.def Info: ../figs_chris/S_Interpolation2.pdf used on input line 
-297.
+307.
 (pdftex.def)             Requested size: 243.91124pt x 171.38066pt.
 
-<../figs_chris/MZI_simple_MC1.pdf, id=329, 324.21124pt x 123.46124pt>
+<../figs_chris/MZI_simple_MC1.pdf, id=336, 324.21124pt x 123.46124pt>
 File: ../figs_chris/MZI_simple_MC1.pdf Graphic file (type pdf)
 
 <use ../figs_chris/MZI_simple_MC1.pdf>
-Package pdftex.def Info: ../figs_chris/MZI_simple_MC1.pdf used on input line 30
+Package pdftex.def Info: ../figs_chris/MZI_simple_MC1.pdf used on input line 31
 5.
 (pdftex.def)             Requested size: 243.91124pt x 92.88391pt.
 
-<../figs_chris/MZI_simple_MC2.pdf, id=330, 306.14375pt x 223.83624pt>
+<../figs_chris/MZI_simple_MC2.pdf, id=337, 306.14375pt x 223.83624pt>
 File: ../figs_chris/MZI_simple_MC2.pdf Graphic file (type pdf)
 
 <use ../figs_chris/MZI_simple_MC2.pdf>
-Package pdftex.def Info: ../figs_chris/MZI_simple_MC2.pdf used on input line 30
+Package pdftex.def Info: ../figs_chris/MZI_simple_MC2.pdf used on input line 31
 7.
 (pdftex.def)             Requested size: 243.91124pt x 178.3349pt.
 
-Overfull \hbox (9.99998pt too wide) in paragraph at lines 305--308
+Overfull \hbox (9.99998pt too wide) in paragraph at lines 315--318
  [][][][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8] [9 <../figs_chris/S_Interpolation1.pdf> <../figs_chris/S_Interpolation2.pdf
-> <../figs_chris/MZI_simple_MC1.pdf> <../figs_chris/MZI_simple_MC2.pdf>]
-<../figs_chris/flow_chart.pdf, id=498, 359.3425pt x 554.07pt>
+[9 <../figs_chris/S_Interpolation1.pdf> <../figs_chris/S_Interpolation2.pdf>]
+[10 <../figs_chris/MZI_simple_MC1.pdf> <../figs_chris/MZI_simple_MC2.pdf>]
+<../figs_chris/flow_chart.pdf, id=505, 359.3425pt x 554.07pt>
 File: ../figs_chris/flow_chart.pdf Graphic file (type pdf)
 
 <use ../figs_chris/flow_chart.pdf>
-Package pdftex.def Info: ../figs_chris/flow_chart.pdf used on input line 344.
+Package pdftex.def Info: ../figs_chris/flow_chart.pdf used on input line 354.
 (pdftex.def)             Requested size: 170.74084pt x 263.27052pt.
 
-<../figs_chris/wafer_maps.pdf, id=499, 418.56375pt x 552.0625pt>
+<../figs_chris/wafer_maps.pdf, id=506, 418.56375pt x 552.0625pt>
 File: ../figs_chris/wafer_maps.pdf Graphic file (type pdf)
 
 <use ../figs_chris/wafer_maps.pdf>
-Package pdftex.def Info: ../figs_chris/wafer_maps.pdf used on input line 346.
+Package pdftex.def Info: ../figs_chris/wafer_maps.pdf used on input line 356.
 (pdftex.def)             Requested size: 195.126pt x 257.35503pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[10] <../figs_chris/MZI_spatial_MC1.pdf, id=523, 368.37625pt x 256.96pt>
+ [11 <../figs_chris/flow_chart.pdf> <../figs_chris/wafer_maps.pdf>]
+<../figs_chris/MZI_spatial_MC1.pdf, id=602, 368.37625pt x 256.96pt>
 File: ../figs_chris/MZI_spatial_MC1.pdf Graphic file (type pdf)
 
 <use ../figs_chris/MZI_spatial_MC1.pdf>
 Package pdftex.def Info: ../figs_chris/MZI_spatial_MC1.pdf used on input line 3
-66.
+76.
 (pdftex.def)             Requested size: 243.91124pt x 170.13911pt.
 
-<../figs_chris/MZI_spatial_MC2.pdf, id=524, 419.5675pt x 291.0875pt>
+<../figs_chris/MZI_spatial_MC2.pdf, id=603, 419.5675pt x 291.0875pt>
 File: ../figs_chris/MZI_spatial_MC2.pdf Graphic file (type pdf)
 
 <use ../figs_chris/MZI_spatial_MC2.pdf>
 Package pdftex.def Info: ../figs_chris/MZI_spatial_MC2.pdf used on input line 3
-68.
+78.
 (pdftex.def)             Requested size: 243.91124pt x 169.22173pt.
 
-Overfull \hbox (9.99998pt too wide) in paragraph at lines 366--369
+Overfull \hbox (9.99998pt too wide) in paragraph at lines 376--379
  [][][][] 
  []
 
-[11 <../figs_chris/flow_chart.pdf> <../figs_chris/wafer_maps.pdf> <../figs_chri
-s/MZI_spatial_MC1.pdf> <../figs_chris/MZI_spatial_MC2.pdf>]
-<../figs_paper/DPSWBG_gds.png, id=660, 2072.74374pt x 80.3pt>
-File: ../figs_paper/DPSWBG_gds.png Graphic file (type png)
+[12 <../figs_chris/MZI_spatial_MC1.pdf> <../figs_chris/MZI_spatial_MC2.pdf>]
+<../figs_paper/DPSWBG_gds2.png, id=670, 1781.65625pt x 264.99pt>
+File: ../figs_paper/DPSWBG_gds2.png Graphic file (type png)
 
-<use ../figs_paper/DPSWBG_gds.png>
-Package pdftex.def Info: ../figs_paper/DPSWBG_gds.png used on input line 391.
-(pdftex.def)             Requested size: 487.8225pt x 18.89867pt.
+<use ../figs_paper/DPSWBG_gds2.png>
+Package pdftex.def Info: ../figs_paper/DPSWBG_gds2.png used on input line 401.
+(pdftex.def)             Requested size: 341.47424pt x 50.78531pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 391--391
- [] 
- []
-
-<../figs_paper/DPSWBG1.png, id=661, 1198.4775pt x 747.79375pt>
+<../figs_paper/DPSWBG1.png, id=671, 1198.4775pt x 747.79375pt>
 File: ../figs_paper/DPSWBG1.png Graphic file (type png)
 
 <use ../figs_paper/DPSWBG1.png>
-Package pdftex.def Info: ../figs_paper/DPSWBG1.png used on input line 393.
+Package pdftex.def Info: ../figs_paper/DPSWBG1.png used on input line 404.
 (pdftex.def)             Requested size: 195.126pt x 121.74895pt.
 
-<../figs_paper/DPSWBG2.png, id=662, 1200.485pt x 747.79375pt>
+<../figs_paper/DPSWBG2.png, id=672, 1200.485pt x 747.79375pt>
 File: ../figs_paper/DPSWBG2.png Graphic file (type png)
 
 <use ../figs_paper/DPSWBG2.png>
-Package pdftex.def Info: ../figs_paper/DPSWBG2.png used on input line 395.
+Package pdftex.def Info: ../figs_paper/DPSWBG2.png used on input line 406.
 (pdftex.def)             Requested size: 195.126pt x 121.54356pt.
- (./SPIE_PW_2016_lukasc.bbl [12 <../figs_paper/DPSWBG_gds.png> <../figs_paper/D
-PSWBG1.png> <../figs_paper/DPSWBG2.png>]
+ (./SPIE_PW_2016_lukasc.bbl [13 <../figs_paper/DPSWBG_gds2.png> <../figs_paper/
+DPSWBG1.png> <../figs_paper/DPSWBG2.png>]
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10> not available
 (Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 20.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 426.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 437.
 
-[13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 426.
+[14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 437.
  (./SPIE_PW_2016_lukasc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 426.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 426.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 437.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 437.
 Package rerunfilecheck Info: File `SPIE_PW_2016_lukasc.out' has not changed.
 (rerunfilecheck)             Checksum: 75A5670060F35BF8AE99AFBE4765771E;954.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 426.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 437.
  ) 
 Here is how much of TeX's memory you used:
- 18499 strings out of 493089
- 348175 string characters out of 6134842
- 541807 words of memory out of 5000000
- 21669 multiletter control sequences out of 15000+600000
+ 18508 strings out of 493089
+ 348361 string characters out of 6134842
+ 538658 words of memory out of 5000000
+ 21674 multiletter control sequences out of 15000+600000
  24648 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,10n,47p,10386b,2287s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,10n,47p,10386b,2283s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
@@ -1055,10 +1054,10 @@ xmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on SPIE_PW_2016_lukasc.pdf (13 pages, 4259207 bytes).
+Output written on SPIE_PW_2016_lukasc.pdf (14 pages, 4522535 bytes).
 PDF statistics:
- 750 PDF objects out of 1000 (max. 8388607)
- 578 compressed objects within 6 object streams
- 131 named destinations out of 1000 (max. 500000)
- 203 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 758 PDF objects out of 1000 (max. 8388607)
+ 584 compressed objects within 6 object streams
+ 133 named destinations out of 1000 (max. 500000)
+ 208 words of extra memory for PDF output out of 10000 (max. 10000000)
 
